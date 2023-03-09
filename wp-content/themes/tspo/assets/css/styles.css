@@ -16,6 +16,8 @@
 @import "./custom-utilities.css";
 */
 
+@import 'scss/fonts.scss';
+
 
 /* admin bar fix */
 body.admin-bar {

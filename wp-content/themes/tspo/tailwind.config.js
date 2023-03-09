@@ -14,7 +14,19 @@ module.exports = {
     //}
   ],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        lato: 'Lato, sans-serif'
+      },
+      colors: {
+        blue: {
+          DEFAULT: '#003E7A',
+          light: '#D3D9DF',
+          dark: '#00274D',
+        },
+        body: '#FFFEFD',
+      }
+    }
   },
   plugins: []
 }

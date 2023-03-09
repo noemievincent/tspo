@@ -12,7 +12,8 @@
 
 # Remove Non LWS plugins
 ## ADD PLUGINS AS THEY ARE GETTING ADDED
-## /wp-content/plugins/
+/wp-content/plugins/advanced-custom-fields
+/wp-content/plugins/contact-form-7
 
 /wp-content/advanced-cache.php
 /wp-content/wp-rocket-config
