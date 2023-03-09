@@ -27,8 +27,8 @@ export default defineConfig({
   // config
   root: '',
   base: process.env.NODE_ENV === 'development'
-    ? '/'
-    : '/dist/',
+      ? '/wp-content/themes/tspo/'
+      : '/wp-content/themes/tspo/dist/',
 
   build: {
     // output dir for production build
@@ -87,7 +87,7 @@ export default defineConfig({
     //},
 
     hmr: {
-      host: 'localhost',
+      host: 'tspo.local',
       //port: 443
     },
     

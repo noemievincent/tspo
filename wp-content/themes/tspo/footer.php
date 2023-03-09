@@ -1,8 +1,13 @@
     </main>
 
-    <footer class="flex-0 bg-slate-100 px-4 py-2">
-        <div class="container mx-auto text-center">
-            <p class="text-xs">Currently in <strong><?php echo (IS_VITE_DEVELOPMENT) ? "development" : "production" ?></strong> mode.</p>
+    <footer class="flex-0 px-4 py-2">
+        <div class="max-w-screen-lg mx-auto flex flex-col items-center gap-6">
+            <div class="">
+                <a href="<?= home_url() ?>">Logo</a>
+            </div>
+            <div>
+                <?= wp_nav_menu(['menu' => 'Navigation principale', 'menu_id' => 'header-nav', 'menu_class' => 'flex gap-4', 'container' => false]) ?>
+            </div>
         </div>
     </footer>
 
