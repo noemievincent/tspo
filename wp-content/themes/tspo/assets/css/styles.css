@@ -17,9 +17,15 @@
 */
 
 @import 'scss/fonts.scss';
+@import 'scss/header.scss';
 
 
 /* admin bar fix */
 body.admin-bar {
     max-height: calc(100vh - 32px);
 }
+
+.wysiwyg {
+    @apply text-lg leading-8 flex flex-col gap-4;
+}
+

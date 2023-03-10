@@ -1,0 +1,43 @@
+header {
+  .header-nav {
+    .menu-item {
+      @apply font-semibold uppercase;
+    }
+  }
+
+  .header-menu {
+    @apply max-rg:translate-x-full transition-all duration-700;
+  }
+
+  .toggle:checked ~ .header-container .header-menu {
+    @apply translate-x-0;
+  }
+
+  .burger-menu .opened-text {
+    @apply hidden;
+  }
+
+  .toggle:checked ~ .header-container .burger .burger-menu .opened-text {
+    @apply block;
+  }
+
+  .toggle:checked ~ .header-container .burger .burger-menu .closed-text {
+    @apply hidden;
+  }
+
+  .toggle:checked ~ .header-container .burger .lines {
+    @apply w-10 items-center;
+    transform: translateX(-3px);
+    .line-1 {
+      transform: rotate(-45deg) translate(3px, 3px);
+      width: 66%;
+    }
+    .line-2 {
+      opacity: 0;
+    }
+    .line-3 {
+      transform: rotate(45deg) translate(3px, -3px);
+      width: 66%;
+    }
+  }
+}

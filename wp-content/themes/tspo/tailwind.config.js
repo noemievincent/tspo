@@ -14,6 +14,14 @@ module.exports = {
     //}
   ],
   theme: {
+    screens: {
+      sm: "460px",
+      md: "768px",
+      rg: "976px",
+      lg: "1440px",
+      xl: "1920px",
+      "2xl": "2300px",
+    },
     extend: {
       fontFamily: {
         lato: 'Lato, sans-serif'

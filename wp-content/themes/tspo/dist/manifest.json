@@ -1,6 +1,30 @@
 {
+  "assets/fonts/Lato/Lato-Regular.ttf": {
+    "file": "assets/Lato-Regular-6f6940be.ttf",
+    "src": "assets/fonts/Lato/Lato-Regular.ttf"
+  },
+  "assets/fonts/Lato/Lato-Semibold.ttf": {
+    "file": "assets/Lato-Semibold-2dc5d31e.ttf",
+    "src": "assets/fonts/Lato/Lato-Semibold.ttf"
+  },
+  "assets/fonts/Lato/Lato-Bold.ttf": {
+    "file": "assets/Lato-Bold-bf1b8130.ttf",
+    "src": "assets/fonts/Lato/Lato-Bold.ttf"
+  },
+  "assets/fonts/Lato/Lato-Light.ttf": {
+    "file": "assets/Lato-Light-e9d59afb.ttf",
+    "src": "assets/fonts/Lato/Lato-Light.ttf"
+  },
+  "assets/fonts/Lato/Lato-Heavy.ttf": {
+    "file": "assets/Lato-Heavy-4ce7ec20.ttf",
+    "src": "assets/fonts/Lato/Lato-Heavy.ttf"
+  },
+  "assets/fonts/Lato/Lato-Black.ttf": {
+    "file": "assets/Lato-Black-4ed66fa3.ttf",
+    "src": "assets/fonts/Lato/Lato-Black.ttf"
+  },
   "main.css": {
-    "file": "assets/main-e55fe68c.css",
+    "file": "assets/main-fab057ee.css",
     "src": "main.css"
   },
   "main.js": {
@@ -8,7 +32,15 @@
     "src": "main.js",
     "isEntry": true,
     "css": [
-      "assets/main-e55fe68c.css"
+      "assets/main-fab057ee.css"
+    ],
+    "assets": [
+      "assets/Lato-Light-e9d59afb.ttf",
+      "assets/Lato-Regular-6f6940be.ttf",
+      "assets/Lato-Semibold-2dc5d31e.ttf",
+      "assets/Lato-Bold-bf1b8130.ttf",
+      "assets/Lato-Heavy-4ce7ec20.ttf",
+      "assets/Lato-Black-4ed66fa3.ttf"
     ]
   }
 }
