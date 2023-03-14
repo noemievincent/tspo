@@ -10,7 +10,7 @@
 <body <?php body_class( 'flex flex-col h-screen font-lato bg-body text-blue-dark' ) ?>>
 <?php wp_body_open(); ?>
 <?php include(get_template_directory() . '/inc/svgs.php'); ?>
-<div class="fixed z-[60] w-full h-2 opacity-40 bg-red-500 sm:bg-pink-500 md:bg-orange-500 rg:bg-amber-400 lg:bg-green-500 min-[1919px]:max-[1920px]:bg-teal-500 xl:bg-blue-500 2xl:bg-purple-500 transition duration-400"></div>
+<div class="fixed z-[60] w-full h-2 opacity-70 bg-red-500 sm:bg-pink-500 md:bg-orange-500 rg:bg-amber-400 lg:bg-green-500 min-[1915px]:max-[1920px]:bg-teal-500 xl:bg-blue-500 2xl:bg-purple-500 transition duration-400"></div>
 <header class="flex-0 <?= is_front_page() ? 'absolute w-full z-50 rg:text-white bg-white/20' : 'bg-blue-light rg:bg-transparent' ?>">
     <h1 id="body" class="sr-only">TSPO</h1>
     <input id="toggle" class="absolute opacity-0 toggle" type="checkbox">
