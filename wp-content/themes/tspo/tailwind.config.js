@@ -33,6 +33,15 @@ module.exports = {
           dark: '#00274D',
         },
         body: '#FFFEFD',
+      },
+      animation: {
+        'bounce-banner': 'bounce-banner 2s infinite',
+      },
+      keyframes: {
+        'bounce-banner': {
+          '0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
+          '40%, 60%': { transform: 'translateY(-10px)' },
+        }
       }
     }
   },

@@ -1,5 +1,39 @@
 <?php get_header() ?>
-    <div class="h-screen w-full bg-gray-600 mb-20"></div>
+    <div class="h-screen w-full mb-20 relative">
+        <div class="h-full w-full opacity-70">
+            <img src="<?= get_template_directory_uri() ?>/assets/img/banner.jpg" alt="" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute top-0 z-10 w-full h-full bg-black/60 grid grid-cols-12 gap-10 items-end py-24">
+            <div class="h-full text-white col-start-2 col-span-10 grid grid-cols-10 gap-10 items-center">
+                <div class="col-span-6 flex flex-col gap-16">
+                    <div class="flex flex-col gap-6">
+                    <h2 class="font-black text-6xl tracking-wide">Plus loin dans le service</h2>
+                    <p class="text-3xl leading-normal font-light">Il n’y pas de confort sans technique. TSPO conçoit et installe toutes les solutions techniques intégrées pour assurer le confort et l’agrément d’usage des occupants, quel que soit le bâtiment.</p>
+                    </div>
+                    <a href="/about"
+                       class="w-fit tracking-wide font-bold text-xl flex items-center gap-3 hover:gap-6 focus:gap-6 transition-all">
+                        À propos de nous
+                        <svg class="arrow h-4 w-8 fill-white">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="absolute bottom-0 right-0 w-full p-10">
+                    <div class="text-white text-xl text-center flex items-center flex-col gap-2 justify-end rg:items-end rg:flex-row rg:gap-4 rg:text-end">
+                        <p class="tracking-wide font-light"><strong class="font-semibold">Faites défiler la page</strong> <br> pour en
+                            savoir
+                            plus</p>
+                        <svg class="scroll-down-desktop h-10 w-10 animate-bounce-banner max-rg:hidden">
+                            <use xlink:href="#scroll-down-desktop"></use>
+                        </svg>
+                        <svg class="scroll-down-mobile h-6 w-6 animate-bounce-banner rg:hidden">
+                            <use xlink:href="#scroll-down-mobile"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="grid grid-cols-12 gap-4">
         <section aria-labelledby="services" class="col-start-2 col-span-10 flex flex-col gap-10">
             <h2 id="services" class="font-extrabold text-3xl">Les techniques intégrées pour...</h2>
