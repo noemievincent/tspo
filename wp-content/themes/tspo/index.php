@@ -1,16 +1,19 @@
 <?php get_header() ?>
     <div class="h-screen w-full mb-20 relative">
         <div class="h-full w-full opacity-70">
-            <img src="<?= get_template_directory_uri() ?>/assets/img/banner.jpg" alt="" class="w-full h-full object-cover">
+            <img src="<?= get_template_directory_uri() ?>/assets/img/banner.jpg" alt=""
+                 class="w-full h-full object-cover">
         </div>
         <div class="absolute top-0 z-10 w-full h-full bg-black/60 grid grid-cols-12 gap-10 items-end py-24">
             <div class="h-full text-white col-start-2 col-span-10 grid grid-cols-10 gap-10 items-center">
                 <div class="col-span-6 flex flex-col gap-16">
                     <div class="flex flex-col gap-6">
-                    <h2 class="font-black text-6xl tracking-wide">Plus loin dans le service</h2>
-                    <p class="text-3xl leading-normal font-light">Il n’y pas de confort sans technique. TSPO conçoit et installe toutes les solutions techniques intégrées pour assurer le confort et l’agrément d’usage des occupants, quel que soit le bâtiment.</p>
+                        <h2 class="font-black text-6xl tracking-wide">Plus loin dans le service</h2>
+                        <p class="text-3xl leading-normal font-light">Il n’y pas de confort sans technique. TSPO conçoit
+                            et installe toutes les solutions techniques intégrées pour assurer le confort et l’agrément
+                            d’usage des occupants, quel que soit le bâtiment.</p>
                     </div>
-                    <a href="/about"
+                    <a href="<?= get_permalink( get_page_by_title( 'À propos' ) ) ?>"
                        class="w-fit tracking-wide font-bold text-xl flex items-center gap-3 hover:gap-6 focus:gap-6 transition-all">
                         À propos de nous
                         <svg class="arrow h-4 w-8 fill-white">
@@ -20,7 +23,8 @@
                 </div>
                 <div class="absolute bottom-0 right-0 w-full p-10">
                     <div class="text-white text-xl text-center flex items-center flex-col gap-2 justify-end rg:items-end rg:flex-row rg:gap-4 rg:text-end">
-                        <p class="tracking-wide font-light"><strong class="font-semibold">Faites défiler la page</strong> <br> pour en
+                        <p class="tracking-wide font-light"><strong class="font-semibold">Faites défiler la
+                                page</strong> <br> pour en
                             savoir
                             plus</p>
                         <svg class="scroll-down-desktop h-10 w-10 animate-bounce-banner max-rg:hidden">
@@ -39,11 +43,11 @@
             <h2 id="services" class="font-extrabold text-3xl">Les techniques intégrées pour...</h2>
             <div class="grid grid-cols-2 gap-4">
                 <?php for ( $i = 1; $i <= 4; $i ++ ): ?>
-                    <article aria-labelledby="article-<?= $i ?>" class="group relative h-[400px]">
-                        <a href="#article-<?= $i ?>" class="absolute z-10 h-full w-full opacity-0">En savoir plus</a>
+                    <article aria-labelledby="service-<?= $i ?>" class="group relative h-[400px]">
+                        <a href="#service-<?= $i ?>" class="absolute z-10 h-full w-full opacity-0">En savoir plus</a>
                         <div class="absolute h-full w-full p-8 text-white bg-black/40 group-hover:bg-black/80 group-focus:bg-black/80 transition-colors">
                             <div class="h-full flex flex-col gap-5">
-                                <h3 id="article-<?= $i ?>" class="font-extrabold text-4xl">Titre du service</h3>
+                                <h3 id="service-<?= $i ?>" class="font-extrabold text-4xl">Titre du service</h3>
                                 <div class="h-full flex flex-col justify-between opacity-0 translate-y-4 group-hover:opacity-100 group-focus:opacity-100 group-hover:translate-y-0 group-focus:translate-y-0 transition-all">
                                     <p class="text-lg leading-8">Nisi excepteur pariatur aute aute cillum irure aliqua
                                         tempor laborum ipsum consectetur
@@ -86,7 +90,7 @@
                             <img src="<?= $clients_picture['url'] ?>" alt="<?= $clients_picture['alt'] ?>"
                                  class="w-full max-h-[360px] object-cover object-top">
                             <a href="<?= $clients_link['url'] ?>"
-                               class="w-fit font-bold text-lg flex items-center gap-3 hover:gap-6 focus:gap-6 transition-all">
+                               class="w-fit tracking-wide font-bold text-lg flex items-center gap-3 hover:gap-6 focus:gap-6 transition-all">
                                 <?= $clients_link['title'] ?>
                                 <svg class="arrow h-4 w-8 fill-blue-dark">
                                     <use xlink:href="#arrow"></use>
@@ -97,8 +101,39 @@
                 </div>
             </div>
         </section>
-        <section aria-labelledby="news" class="col-start-2 col-span-10">
+        <section aria-labelledby="news" class="col-start-2 col-span-10 flex flex-col gap-10">
             <h2 id="news" class="font-extrabold text-3xl">Actualités à la une</h2>
+            <div class="grid grid-cols-3 gap-10">
+                <?php for ( $i = 1; $i <= 3; $i ++ ): ?>
+                <article aria-labelledby="news-<?= $i ?>" class="relative border border-blue-dark/30">
+                    <a href="#news-<?= $i ?>" class="absolute z-10 h-full w-full opacity-0">En savoir plus</a>
+                    <div class="overflow-hidden max-h-[284px]">
+                        <img src="<?= get_template_directory_uri() ?>/assets/img/news-<?= $i ?>.jpg"
+                             alt="Titre de l'actualité"
+                             class="h-full w-full object-cover group-hover:scale-11 group-focus:scale-110 transition-transform">
+                    </div>
+                    <div class="flex flex-col gap-8 px-6 py-8">
+                        <div class="flex flex-col gap-3">
+                            <h3 id="news-<?= $i ?>" class="truncate font-extrabold text-xl">Titre de l'actualité</h3>
+                            <p class="cut-text leading-relaxed">Proident irure proident exercitation laboris ipsum nulla aliquip aliqua cupidatat exercitation commodo excepteur eiusmod. Eu et excepteur eiusmod nisi officia dolor exercitation. Nisi sunt do ipsum magna velit excepteur ipsum anim culpa dolore sint ipsum cupidatat fugiat. Qui enim eu adipisicing irure laboris culpa.</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <time datetime="2023-04-24" class="text-lg">24 avril 2023</time>
+                            <svg class="arrow h-5 w-7 fill-blue-dark">
+                                <use xlink:href="#arrow"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+                <?php endfor; ?>
+            </div>
+            <a href="<?= get_permalink( get_page_by_title( 'Actualités' ) ) ?>"
+               class="self-end w-fit tracking-wide font-bold text-lg flex items-center gap-3 hover:gap-6 focus:gap-6 transition-all">
+                toutes les actualités
+                <svg class="arrow h-4 w-8 fill-blue-dark">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+            </a>
         </section>
     </div>
 <?php get_footer() ?>
