@@ -1,0 +1,41 @@
+.services {
+  .slider {
+    @apply m-0 flex flex-col gap-6;
+    .slick-list {
+      @apply rl:h-[460px];
+    }
+    .slick-track {
+      @apply h-full flex gap-5;
+      &::before, &::after {
+        @apply content-none;
+      }
+
+      .slick-slide {
+        height: inherit !important;
+        > div {
+          @apply h-full;
+        }
+        article {
+          @apply !h-full;
+        }
+      }
+    }
+
+    .slick-dots {
+      @apply static m-0 flex gap-1.5 justify-center;
+      li {
+        @apply m-0 w-2 h-2 relative;
+        &.slick-active {
+          .slick-bullet {
+            @apply bg-orange border-0;
+          }
+        }
+
+        .slick-bullet {
+          @apply w-2 h-2 absolute left-0 inline-block border border-orange bg-transparent rounded transition-all duration-200 hover:bg-orange hover:border hover:border-orange;
+        }
+      }
+
+    }
+  }
+}

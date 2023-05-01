@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php wp_head() ?>
 </head>
-<body <?php body_class( 'flex flex-col h-screen font-lato bg-orange-light text-blue-dark selection:bg-blue selection:text-white' ) ?>>
+<body <?php body_class( 'no-js flex flex-col h-screen font-lato bg-orange-light text-blue-dark selection:bg-blue selection:text-white' ) ?>>
 <?php wp_body_open(); ?>
 <?php include( get_template_directory() . '/inc/svgs.php' ); ?>
 <div
@@ -15,7 +15,7 @@
 <header
 	class="flex-0 bg-white text-blue-dark border-b border-blue-dark/40 <?= is_front_page() ? 'absolute w-full z-50' : '' ?>">
 	<input id="toggle" class="absolute opacity-0 toggle" type="checkbox">
-	<div class="header-container bg-white relative grid grid-cols-12 gap-5 justify-between py-3 md:py-5 lg:py-8">
+	<div class="header-container bg-white relative grid-default justify-between py-3 md:py-5 lg:py-8">
 		<div
 			class="burger relative bg-white z-50 col-start-2 col-span-10 rl:col-start-2 rl:col-span-2 flex justify-between items-center">
 			<a href="<?= home_url() ?>">

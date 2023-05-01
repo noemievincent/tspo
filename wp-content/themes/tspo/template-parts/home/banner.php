@@ -10,7 +10,7 @@ $link  = get_field( 'banner_link' );
 		     class="w-full h-full object-cover">
 	</div>
 	<div class="absolute top-0 z-10 w-full h-full bg-blue-darker/70 py-24">
-		<div class="h-full text-white grid grid-cols-12 gap-5 items-center">
+		<div class="h-full text-white grid-default items-center">
 			<div class="col-start-2 col-span-10 flex flex-col gap-16 rg:col-start-2 rg:col-span-8 rg:gap-20 lg:col-start-2 lg:col-span-6 lg:gap-28">
 				<div class="flex flex-col gap-6 rg:gap-8 lg:gap-10">
 					<h2 id="banner" class="w-fit font-black tracking-wide text-3xl md:text-4xl rg:text-5xl lg:text-6xl"><?= $title ?></h2>

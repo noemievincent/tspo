@@ -3,5 +3,6 @@
 <?php get_template_part( 'template-parts/home/banner' ) ?>
 	<div id="content" class="">
 		<?php get_template_part( 'template-parts/home/about' ) ?>
+		<?php get_template_part( 'template-parts/home/services' ) ?>
 	</div>
 <?php get_footer() ?>

@@ -1,25 +1,30 @@
-@import "tailwindcss/base";
+@import 'tailwindcss/base';
 /*
  * uncomment if adding custom base styles
 @import "./custom-base-styles.css";
 */
 
-@import "tailwindcss/components";
+@import 'tailwindcss/components';
 /*
  * uncomment if adding custom commponents
 @import "./custom-components.css";
 */
 
-@import "tailwindcss/utilities";
+@import 'tailwindcss/utilities';
 /*
  * uncomment if adding custom utilities
 @import "./custom-utilities.css";
 */
 
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
 @import 'scss/fonts.scss';
 @import 'scss/header.scss';
 @import 'scss/home/banner.scss';
+@import 'scss/home/services.scss';
 
+@import 'scss/no-js.scss';
 
 /* admin bar fix */
 body.admin-bar {
@@ -41,6 +46,10 @@ body.admin-bar {
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
+    }
+
+    .grid-default {
+        @apply grid grid-cols-12 gap-5;
     }
 }
 

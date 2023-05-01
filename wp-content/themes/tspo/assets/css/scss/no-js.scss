@@ -1,0 +1,13 @@
+.no-js {
+  &.home {
+    .services {
+      > div {
+        @apply col-start-2 col-span-10;
+      }
+
+      .services-container {
+        @apply grid grid-cols-2 gap-5;
+      }
+    }
+  }
+}
