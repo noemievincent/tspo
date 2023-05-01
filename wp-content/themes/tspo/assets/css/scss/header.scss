@@ -6,7 +6,7 @@ header {
   }
 
   .header-menu {
-    @apply max-lg:-translate-y-full transition-all duration-700;
+    @apply max-rl:-translate-y-full transition-all duration-700;
   }
 
   .toggle:checked ~ .header-container .header-menu {
