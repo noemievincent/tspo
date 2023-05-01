@@ -18,11 +18,16 @@
 
 @import 'scss/fonts.scss';
 @import 'scss/header.scss';
+@import 'scss/home/banner.scss';
 
 
 /* admin bar fix */
 body.admin-bar {
     max-height: calc(100vh - 32px);
+}
+
+* {
+    /*outline: deeppink dashed 1px;*/
 }
 
 @layer base {

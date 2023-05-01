@@ -28,11 +28,14 @@ module.exports = {
       },
       colors: {
         blue: {
-          DEFAULT: '#003E7A',
-          light: '#D3D9DF',
+          DEFAULT: '#203483',
+          light: '#DEE2E7',
           dark: '#00274D',
         },
-        body: '#FFFEFD',
+        orange: {
+          DEFAULT: '#F18515',
+          light: '#FFFEFD',
+        },
       },
       animation: {
         'bounce-banner': 'bounce-banner 2s infinite',

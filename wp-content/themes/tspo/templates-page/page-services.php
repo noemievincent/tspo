@@ -1,4 +1,4 @@
-<?php //Template Name: Actualités
+<?php //Template Name: Compétences
 get_header(); ?>
     <h1><?= the_title(); ?></h1>
 <?php get_footer(); ?>
