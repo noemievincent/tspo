@@ -6,11 +6,11 @@ header {
   }
 
   .header-menu {
-    @apply max-rg:translate-x-full transition-all duration-700;
+    @apply max-lg:-translate-y-full transition-all duration-700;
   }
 
   .toggle:checked ~ .header-container .header-menu {
-    @apply translate-x-0;
+    @apply translate-y-0;
   }
 
   .burger-menu .opened-text {

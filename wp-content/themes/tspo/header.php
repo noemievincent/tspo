@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
 	<title><?= is_404() ? '404' : get_the_title() ?> - <?= get_bloginfo( 'title' ) ?></title>
 	<meta charset="UTF-8">
@@ -15,9 +15,9 @@
 <header
 	class="flex-0 bg-white text-blue-dark border-b border-blue-dark/40 <?= is_front_page() ? 'absolute w-full z-50' : '' ?>">
 	<input id="toggle" class="absolute opacity-0 toggle" type="checkbox">
-	<div class="header-container relative grid grid-cols-12 gap-4 justify-between py-3 lg:py-8">
+	<div class="header-container bg-white relative grid grid-cols-12 gap-5 justify-between py-3 md:py-5 rg:py-8">
 		<div
-			class="burger relative z-50 col-start-2 col-span-10 rg:col-start-2 rg:col-span-2 flex justify-between items-center">
+			class="burger relative bg-white z-50 col-start-2 col-span-10 lg:col-start-2 lg:col-span-2 flex justify-between items-center">
 			<a href="<?= home_url() ?>">
 				<span class="sr-only">Retourner à l'accueil</span>
 				<span>
@@ -26,7 +26,7 @@
 					</svg>
 				</span>
 			</a>
-			<label for="toggle" class="burger-menu h-5 w-9 rg:hidden">
+			<label for="toggle" class="burger-menu h-5 w-9 lg:hidden">
                 <span class="lines mr-0 flex flex-col items-end justify-between h-full w-full">
                     <span aria-hidden="true"
                           class="line-1 block w-full h-0.5 bg-blue-dark transition-all duration-300 origin-top-right"></span>
@@ -40,11 +40,11 @@
 			</label>
 		</div>
 		<div role="navigation" aria-labelledby="main-menu"
-		     class="header-menu max-rg:absolute max-rg:top-0 max-rg:z-40 max-rg:h-screen w-full max-rg:bg-white flex rg:justify-end rg:col-end-12 rg:col-span-8">
+		     class="header-menu max-lg:absolute max-lg:top-0 max-lg:z-40 max-lg:h-screen w-full max-lg:bg-white flex lg:justify-end lg:col-end-12 lg:col-span-8">
 			<?= wp_nav_menu( [
 				'menu'       => 'Navigation principale',
 				'menu_id'    => 'header-nav',
-				'menu_class' => 'header-nav w-full flex gap-12 items-center justify-center rg:justify-end flex-col rg:gap-8 rg:flex-row',
+				'menu_class' => 'header-nav w-full flex gap-12 items-center justify-center lg:justify-end flex-col lg:gap-8 lg:flex-row',
 				'container'  => false
 			] ) ?>
 		</div>
