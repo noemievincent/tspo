@@ -29,6 +29,15 @@ function tspo_setup() {
 
 add_action( 'after_setup_theme', 'tspo_setup' );
 
+
+acf_add_options_page( [
+	'page_title' => 'Options générales',
+	'menu_title' => 'Options générales',
+	'menu_slug'  => 'general-options',
+	'capability' => 'edit_posts',
+	'redirect'   => false
+] );
+
 register_post_type( 'services', [
 	'label'         => 'Registres de travail',
 	'labels'        => [

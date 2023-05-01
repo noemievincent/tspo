@@ -5,28 +5,12 @@ $desc        = get_field( 'about_description' );
 $button      = get_field( 'about_button' );
 
 $values_title = get_field( 'values_title' );
-$values_items = [
-	'item-1' => [
-		'title' => 'écoute de vos besoins',
-		'icon' => 'ear',
-	],
-	'item-2' => [
-		'title' => 'adaptation des techniques utilisées',
-		'icon' => 'adaptation',
-	],
-	'item-3' => [
-		'title' => 'fournisseur disponible et fiable',
-		'icon' => 'reliable',
-	],
-	'item-4' => [
-		'title' => 'sécurité et robustesse des systèmes',
-		'icon' => 'security',
-	],
-]
+$values_items = get_field( 'values_items' );
 ?>
 <div class="flex flex-col">
 	<section aria-labelledby="about" class="about grid-default items-center">
-		<div class="col-start-2 col-span-10 rl:col-start-2 rl:col-span-4 flex flex-col gap-12 justify-between my-16 rl:my-24">
+		<div
+			class="col-start-2 col-span-10 rl:col-start-2 rl:col-span-4 flex flex-col gap-12 justify-between my-16 rl:my-24">
 			<div class="flex flex-col gap-4">
 				<h2 id="about"
 				    class="text-blue-dark w-fit font-black tracking-wider text-3xl"><?= $about_title ?></h2>
@@ -41,7 +25,7 @@ $values_items = [
 			<img src="<?= $img['url'] ?>" alt="<?= $img['alt'] ?>" class="w-full h-full object-cover">
 		</div>
 	</section>
-	<?php if ( $values_items ): ?>
+	<?php if ( have_rows( 'values_items' ) ): ?>
 		<section aria-labelledby="values" class="values bg-blue-light py-20 rg:py-28 grid-default items-center">
 			<div class="col-start-2 col-span-10 flex flex-col gap-12 rg:gap-20">
 				<h2 id="values"
@@ -49,10 +33,9 @@ $values_items = [
 				<ul class="flex gap-10 justify-center flex-wrap items-start rg:justify-around rg:gap-4">
 					<?php foreach ( $values_items as $item ): ?>
 						<li class="flex items-center flex-col-reverse gap-4 rg:gap-8">
-							<p class="font-bold text-lg w-44 rg:w-56 text-center"><?= $item['title'] ?></p>
-							<svg class="<?= $item['icon'] ?> h-16 w-16 rg:h-24 rg:w-24 fill-orange">
-								<use xlink:href="#<?= $item['icon'] ?>"></use>
-							</svg>
+							<p class="font-bold text-lg w-44 rg:w-56 text-center"><?= $item['item_title'] ?></p>
+							<img src="<?= $item['item_icon']['url'] ?>" alt=""
+							     class="style-svg h-16 w-16 rg:h-24 rg:w-24 fill-orange">
 						</li>
 					<?php endforeach; ?>
 				</ul>
