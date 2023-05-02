@@ -19,7 +19,7 @@ $values_items = get_field( 'values_items' );
 				</div>
 			</div>
 			<a href="<?= $button['url'] ?>"
-			   class="text-lg bg-orange border border-orange text-white text-center inline-block max-sm:w-full w-fit px-10 py-2.5"><?= $button['title'] ?></a>
+			   class="text-lg bg-orange border border-orange text-white text-center inline-block max-sm:w-full w-fit px-10 py-2.5 hover:bg-transparent hover:text-orange focus:bg-transparent focus:text-orange transition-colors"><?= $button['title'] ?></a>
 		</div>
 		<div class="max-rl:hidden rl:col-end-13 rl:col-span-6 h-full">
 			<img src="<?= $img['url'] ?>" alt="<?= $img['alt'] ?>" class="w-full h-full object-cover">
@@ -34,8 +34,7 @@ $values_items = get_field( 'values_items' );
 					<?php foreach ( $values_items as $item ): ?>
 						<li class="flex items-center flex-col-reverse gap-4 rg:gap-8">
 							<p class="font-bold text-lg w-44 rg:w-56 text-center"><?= $item['item_title'] ?></p>
-							<img src="<?= $item['item_icon']['url'] ?>" alt=""
-							     class="style-svg h-16 w-16 rg:h-24 rg:w-24 fill-orange">
+							<img src="<?= $item['item_icon']['url'] ?>" alt="" class="style-svg  fill-orange">
 						</li>
 					<?php endforeach; ?>
 				</ul>
