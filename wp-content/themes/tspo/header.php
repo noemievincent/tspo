@@ -40,13 +40,21 @@
 			</label>
 		</div>
 		<div role="navigation" aria-labelledby="main-menu"
-		     class="header-menu max-rl:absolute max-rl:top-0 max-rl:z-40 max-rl:h-screen w-full max-rl:bg-white flex rl:justify-end rl:col-end-12 rl:col-span-8">
-			<?= wp_nav_menu( [
-				'menu'       => 'Navigation principale',
-				'menu_id'    => 'header-nav',
-				'menu_class' => 'header-nav w-full flex gap-12 items-center justify-center rl:justify-end flex-col rl:gap-8 rl:flex-row',
-				'container'  => false
-			] ) ?>
+		     class="header-menu max-rl:absolute max-rl:top-0 max-rl:z-40 max-rl:h-screen w-full max-rl:bg-white rl:col-end-12 rl:col-span-8 flex justify-center items-center rl:justify-end">
+			<div class="flex max-rl:flex-col items-center gap-14 rl:gap-6 rl:divide-x divide-orange/50">
+				<?= wp_nav_menu( [
+					'menu'       => 'Navigation principale',
+					'menu_id'    => 'header-nav',
+					'menu_class' => 'header-nav w-full flex gap-10 items-center justify-center rl:justify-end flex-col rl:gap-5 lg:gap-8 rl:flex-row',
+					'container'  => false
+				] ) ?>
+				<a href="<?= get_field('facebook', 'options') ?>" class="group rl:pl-6">
+					<span class="sr-only">Facebook</span>
+					<svg class="facebook h-5 w-3 fill-blue-dark group-hover:fill-orange group-focus:fill-orange transition-colors">
+						<use xlink:href="#facebook"></use>
+					</svg>
+				</a>
+			</div>
 		</div>
 	</div>
 </header>
