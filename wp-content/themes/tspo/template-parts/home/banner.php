@@ -24,7 +24,7 @@ $link  = get_field( 'banner_link' );
 					</svg>
 				</a>
 			</div>
-			<div class="absolute bottom-0 right-0 w-full p-6 rg:p-8 lg:p-10">
+			<div class="absolute bottom-0 right-0 w-fit p-6 rg:p-8 lg:p-10">
 				<a href="#content"
 					class="text-white fill-orange text-center flex items-center flex-col gap-4 justify-end rg:text-lg rg:leading-6 rg:items-end rg:flex-row rg:gap-4 rg:text-end">
 					<p class="tracking-wider font-light"><strong class="font-semibold">Faites défiler la
