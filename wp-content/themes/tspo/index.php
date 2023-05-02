@@ -7,4 +7,5 @@
 		<?php get_template_part( 'template-parts/home/skills' ) ?>
 		<?php get_template_part( 'template-parts/home/news' ) ?>
 	</div>
+<?php get_template_part( 'template-parts/contact-section' ) ?>
 <?php get_footer() ?>

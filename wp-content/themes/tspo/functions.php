@@ -12,7 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 // it is recommeded to move it into wp-config.php
 define( 'IS_VITE_DEVELOPMENT', true );
 
-
 include "inc/inc.vite.php";
 
 function tspo_setup() {
@@ -29,7 +28,6 @@ function tspo_setup() {
 
 add_action( 'after_setup_theme', 'tspo_setup' );
 
-
 acf_add_options_page( [
 	'page_title' => 'Options générales',
 	'menu_title' => 'Options générales',
@@ -38,6 +36,7 @@ acf_add_options_page( [
 	'redirect'   => false
 ] );
 
+// Custom Post Types
 register_post_type( 'services', [
 	'label'         => 'Registres de travail',
 	'labels'        => [
@@ -58,12 +57,10 @@ register_post_type( 'services', [
 	],
 ] );
 
-
+// Get CPT functions
 function tspo_get_services(): WP_Query {
 	return new WP_Query( [
 		'post_type' => 'services',
 		'order'     => 'ASC',
 	] );
 }
-
-
