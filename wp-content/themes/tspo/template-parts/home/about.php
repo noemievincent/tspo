@@ -34,7 +34,7 @@ $values_items = get_field( 'values_items' );
 					<?php foreach ( $values_items as $item ): ?>
 						<li class="flex items-center flex-col-reverse gap-4 rg:gap-8">
 							<p class="font-bold text-lg w-44 rg:w-56 text-center"><?= $item['item_title'] ?></p>
-							<img src="<?= $item['item_icon']['url'] ?>" alt="" class="style-svg  fill-orange">
+							<img src="<?= $item['item_icon']['url'] ?>" alt="" class="style-svg fill-orange">
 						</li>
 					<?php endforeach; ?>
 				</ul>

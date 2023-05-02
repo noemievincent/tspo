@@ -3,6 +3,34 @@ header {
     .menu-item {
       @apply uppercase tracking-wide;
     }
+
+    .menu-item-has-children {
+      @apply rl:-mx-2 w-max relative bg-white flex flex-col gap-2;
+      > a {
+        @apply relative z-20 w-fit rl:p-2 rl:px-3 flex gap-2 items-center justify-center;
+        &:after {
+          @apply rl:content-[''] w-3.5 h-2 bg-arrow transition-transform duration-500;
+        }
+
+      }
+      &:hover {
+        > a::after {
+          @apply rotate-180;
+        }
+        .sub-menu {
+          @apply text-blue-dark opacity-100 visible scale-y-100;
+        }
+      }
+
+      .sub-menu {
+        @apply rl:absolute text-sm flex flex-col gap-1.5 max-rl:items-center w-full rl:bg-white rl:border rl:border-blue-dark/40 rl:p-2 rl:px-3 rl:pt-9 rl:text-white rl:opacity-0 rl:invisible rl:scale-y-0 rl:origin-top transition-all duration-500;
+        .menu-item {
+          @apply normal-case;
+        }
+      }
+
+
+    }
   }
 
   .header-menu {
@@ -28,13 +56,16 @@ header {
   .toggle:checked ~ .header-container .burger .lines {
     @apply w-10 items-center;
     transform: translateX(-3px);
+
     .line-1 {
       transform: rotate(-45deg) translate(3px, 3px);
       width: 66%;
     }
+
     .line-2 {
       opacity: 0;
     }
+
     .line-3 {
       transform: rotate(45deg) translate(3px, -3px);
       width: 66%;

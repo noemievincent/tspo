@@ -24,7 +24,7 @@
             <div role="navigation" aria-labelledby="footer-menu" class="">
                 <?= wp_nav_menu( [ 'menu'       => 'Navigation principale',
                                    'menu_id'    => 'footer-nav',
-                                   'menu_class' => 'font-semibold uppercase flex items-center gap-5 max-rg:flex-col rg:gap-8',
+                                   'menu_class' => 'footer-nav font-semibold uppercase flex items-center gap-5 max-rg:flex-col rg:gap-8',
                                    'container'  => false
                 ] ) ?>
             </div>
@@ -35,7 +35,7 @@
         <div role="navigation" aria-labelledby="footer-rgpd" class="">
             <?= wp_nav_menu( [ 'menu'       => 'RGPD',
                                'menu_id'    => 'footer-rgpd',
-                               'menu_class' => 'flex max-md:flex-col :items-center gap-3 md:gap-6',
+                               'menu_class' => 'flex max-md:flex-col max-md:items-center gap-3 md:gap-6',
                                'container'  => false
             ] ) ?>
         </div>
