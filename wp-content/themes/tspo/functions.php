@@ -25,6 +25,12 @@ function tspo_setup() {
 			'menu-rgpd'      => __( 'RGPD', 'tspo' ),
 		]
 	);
+
+	// Remove <p> and <br/> from Contact Form 7
+	add_filter('wpcf7_autop_or_not', '__return_false');
+
+	// Get jobs offer in apply form select input
+	add_filter('wpcf7_form_tag', 'dynamic_job_fields');
 }
 
 add_action( 'after_setup_theme', 'tspo_setup' );
@@ -36,6 +42,34 @@ acf_add_options_page( [
 	'capability' => 'edit_posts',
 	'redirect'   => false
 ] );
+
+function dynamic_job_fields($tag)
+{
+	if ($tag['name'] != 'job')
+		return $tag;
+
+	$args = array(
+		'posts_per_page' => -1,
+		'post_type' => 'jobs',
+		'orderby' => 'title',
+		'order' => 'ASC',
+	);
+
+	$custom_posts = get_posts($args);
+
+	if (!$custom_posts)
+		return $tag;
+
+	foreach ($custom_posts as $custom_post) {
+
+		$tag['raw_values'][] = $custom_post->post_title;
+		$tag['values'][] = $custom_post->post_title;
+		$tag['labels'][] = $custom_post->post_title;
+
+	}
+
+	return $tag;
+}
 
 // Custom Post Types & Taxonomies
 register_taxonomy(
@@ -188,7 +222,6 @@ register_post_type( 'jobs', [
 	'show_ui'       => true,
 	'supports'      => [
 		'title',
-		'thumbnail',
 		'editor'
 	],
 ] );
@@ -235,6 +268,13 @@ function tspo_get_partners(): WP_Query {
 function tspo_get_certifications(): WP_Query {
 	return new WP_Query( [
 		'post_type' => 'certifications',
+		'order'     => 'ASC',
+	] );
+}
+
+function tspo_get_jobs(): WP_Query {
+	return new WP_Query( [
+		'post_type' => 'jobs',
 		'order'     => 'ASC',
 	] );
 }

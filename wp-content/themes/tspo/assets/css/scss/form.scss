@@ -1,0 +1,117 @@
+.form {
+  br {
+    @apply hidden;
+  }
+
+  form {
+    @apply flex flex-col-reverse gap-6;
+
+    &.invalid {
+      .wpcf7-response-output {
+        @apply py-4 px-2 m-0 text-center rg:text-lg border-error text-error;
+      }
+    }
+
+    &.sent {
+      .wpcf7-response-output {
+        @apply py-4 px-2 m-0 text-center text-lg border-success-dark text-success-dark;
+      }
+
+      .form-container {
+        @apply sr-only;
+      }
+    }
+
+    .form-container {
+      @apply flex flex-col gap-4 text-blue-dark;
+
+      label {
+        @apply flex flex-col gap-0.5;
+        .label-text {
+          @apply w-fit font-medium text-lg text-blue-dark transition-colors;
+          &.required {
+            @apply after:content-['*'] after:text-orange;
+          }
+        }
+        .label-hint {
+          @apply sr-only;
+        }
+
+        .wpcf7-not-valid-tip {
+          @apply text-error;
+        }
+      }
+
+      input:not(.accept input):not(.wpcf7-file), textarea, select {
+        @apply w-full p-2 bg-white border border-blue-dark/40 outline-none focus:border-orange focus:bg-orange/5 transition-colors;
+        &.wpcf7-not-valid {
+          @apply bg-error-light border-transparent border-b-error focus:border-error focus:bg-error/5;
+          + .wpcf7-not-valid-tip {
+            @apply bg-error w-fit text-white text-xs font-light py-0.5 px-1 pr-6;
+          }
+        }
+      }
+
+      .file-input {
+        @apply p-2 border border-blue-dark/20 cursor-pointer;
+        .wpcf7-form-control-wrap {
+          @apply w-fit;
+        }
+
+        input {
+          @apply file:mr-3 file:py-1 file:px-6 file:bg-transparent file:text-sm file:border-solid file:border file:border-orange file:text-orange file:text-center hover:file:bg-orange hover:file:text-white focus:file:bg-orange focus:file:text-white file:transition-colors;
+        }
+      }
+
+      .column-container {
+        @apply flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-6;
+      }
+
+      .bottom-container {
+        @apply flex flex-col gap-6;
+        span[data-name='accept'], span.accept {
+          @apply flex flex-col gap-2;
+          .wpcf7-list-item {
+            @apply m-0;
+
+            label {
+              @apply cursor-pointer font-light text-sm grid grid-cols-[20px_1fr] items-start gap-4;
+            }
+
+            input {
+              @apply mt-2 cursor-pointer appearance-none w-5 h-5 bg-white border border-blue-dark flex items-center justify-center hover:bg-orange/20 hover:border-orange/50 transition-all before:content-check before:w-5 before:h-5;
+              &:checked {
+                @apply appearance-none w-5 h-5 border-orange bg-orange before:opacity-100;
+              }
+            }
+          }
+
+          .wpcf7-not-valid {
+            .wpcf7-list-item-label {
+              @apply text-error;
+            }
+
+            input {
+              @apply bg-error/10 border-error before:opacity-0;
+            }
+
+            + .wpcf7-not-valid-tip {
+              @apply sr-only;
+            }
+          }
+        }
+
+        .submit-container {
+          @apply relative flex max-md:items-center max-md:justify-center;
+          .submit-button {
+            @apply cursor-pointer bg-orange border border-orange text-white text-center inline-block max-md:w-full w-fit px-10 py-2.5 hover:bg-transparent hover:text-orange focus:bg-transparent focus:text-orange transition-colors;
+          }
+
+          .wpcf7-spinner {
+            @apply absolute;
+          }
+        }
+      }
+    }
+  }
+}

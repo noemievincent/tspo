@@ -32,4 +32,4 @@ $services = tspo_get_services();
 			</div>
 		</div>
 	</section>
-<?php endif; ?>
+<?php endif; wp_reset_postdata(); ?>

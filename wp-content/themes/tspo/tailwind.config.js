@@ -38,6 +38,14 @@ module.exports = {
           DEFAULT: '#F18515',
           light: '#FFFEFD',
         },
+        error: {
+          DEFAULT: '#B70F0F',
+          light: '#FFEBEB'
+        },
+        success: {
+          DEFAULT: '#97BF06',
+          dark: '#78951D',
+        },
       },
       animation: {
         'bounce-banner': 'bounce-banner 2s infinite',
@@ -50,6 +58,9 @@ module.exports = {
       },
       backgroundImage: {
         arrow: 'url("/assets/img/arrow.svg")',
+      },
+      content: {
+        'check': "url('/assets/img/check.svg')",
       },
     }
   },

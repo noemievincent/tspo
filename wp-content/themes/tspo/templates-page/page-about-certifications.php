@@ -36,7 +36,7 @@ $certifications = tspo_get_certifications();
 							</div>
 						</div>
 					</article>
-				<?php endwhile; ?>
+				<?php endwhile; wp_reset_postdata(); ?>
 			</div>
 		</div>
 	</div>

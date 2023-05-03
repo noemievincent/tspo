@@ -24,7 +24,7 @@ $roles = tspo_get_roles();
 							<?php endforeach; ?>
 						</div>
 					</section>
-				<?php endforeach; ?>
+				<?php endforeach; wp_reset_postdata(); ?>
 			</div>
 		</div>
 	</div>

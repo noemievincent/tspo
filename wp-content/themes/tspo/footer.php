@@ -11,7 +11,7 @@
 				</span>
             </a>
             <div role="navigation" aria-labelledby="footer-menu" class="">
-                <?= wp_nav_menu( [ 'menu'       => 'Navigation principale',
+                <?= wp_nav_menu( [ 'menu'       => 'Navigation de pied de page',
                                    'menu_id'    => 'footer-nav',
                                    'menu_class' => 'footer-nav font-semibold uppercase flex items-center gap-5 max-rg:flex-col rg:gap-8',
                                    'container'  => false

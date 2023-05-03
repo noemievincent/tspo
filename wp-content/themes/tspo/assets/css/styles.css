@@ -21,9 +21,9 @@
 
 @import 'scss/fonts.scss';
 @import 'scss/header.scss';
-@import 'scss/footer.scss';
 @import 'scss/home/banner.scss';
 @import 'scss/home/services.scss';
+@import 'scss/form.scss';
 
 @import 'scss/no-js.scss';
 
