@@ -225,6 +225,13 @@ function tspo_get_members( $term_id ): array {
 	);
 }
 
+function tspo_get_partners(): WP_Query {
+	return new WP_Query( [
+		'post_type' => 'partners',
+		'order'     => 'ASC',
+	] );
+}
+
 // Add featured image as a custom column
 add_filter( 'manage_members_posts_columns', 'add_featured_image_column' );
 add_action( 'manage_members_posts_custom_column', 'display_featured_image_column_content', 10, 2 );
