@@ -201,6 +201,30 @@ function tspo_get_services(): WP_Query {
 	] );
 }
 
+function tspo_get_roles(): array|WP_Error|string {
+	return get_terms( [
+		'taxonomy'   => 'roles',
+		'hide_empty' => true
+	] );
+}
+
+function tspo_get_members( $term_id ): array {
+	return get_posts(
+		[
+			'posts_per_page' => -1,
+			'post_type' => 'members',
+			'order'     => 'ASC',
+			'tax_query' => [
+				[
+					'taxonomy' => 'roles',
+					'field'    => 'term_id',
+					'terms'    => $term_id,
+				]
+			]
+		]
+	);
+}
+
 // Add featured image as a custom column
 add_filter( 'manage_members_posts_columns', 'add_featured_image_column' );
 add_action( 'manage_members_posts_custom_column', 'display_featured_image_column_content', 10, 2 );
