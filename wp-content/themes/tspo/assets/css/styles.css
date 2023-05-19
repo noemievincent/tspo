@@ -21,6 +21,7 @@
 
 @import 'scss/fonts.scss';
 @import 'scss/header.scss';
+@import 'scss/wysiwyg.scss';
 @import 'scss/home/banner.scss';
 @import 'scss/home/services.scss';
 @import 'scss/references.scss';
