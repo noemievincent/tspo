@@ -1,0 +1,39 @@
+.single-worksites .gallery {
+  .img:hover img, .img:focus img {
+    @apply opacity-60 transition-opacity;
+  }
+
+  .img-4 {
+    @apply rl:col-span-2 rl:row-span-2;
+  }
+
+  .img:nth-child(n+4) {
+    @apply max-md:sr-only;
+  }
+
+  @media screen(md) {
+    .img-3 {
+      @apply max-rl:col-span-2;
+    }
+
+    .img:nth-child(n+4) {
+      @apply max-rl:sr-only;
+    }
+  }
+
+  @media screen(rl) {
+    .img:nth-child(n+7) {
+      @apply sr-only;
+    }
+  }
+}
+
+.pagination {
+  .page-numbers:not(.next, .prev) {
+    @apply h-7 w-7 flex items-center justify-center rounded-full border border-transparent hover:border-orange/40 focus:border-orange/40 hover:text-orange focus:text-orange transition-colors;
+  }
+
+  .current.page-numbers:not(.next, .prev) {
+    @apply cursor-default h-7 w-7 flex items-center justify-center rounded-full bg-blue/10 border border-blue/40 hover:text-blue focus:text-blue;
+  }
+}

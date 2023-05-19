@@ -16,6 +16,7 @@
     "vite-plugin-live-reload": "^3.0.1"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.17",
     "jquery": "^3.6.4",
     "jquery-bridget": "^3.0.1",
     "postcss-nested-ancestors": "^3.0.0",

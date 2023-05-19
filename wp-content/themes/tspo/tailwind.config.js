@@ -21,7 +21,7 @@ module.exports = {
       rl: "1230px",
       lg: "1440px",
       xl: "1920px",
-      "2xl": "2300px",
+      "2xl": "2560px",
     },
     extend: {
       fontFamily: {

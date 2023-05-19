@@ -27,10 +27,10 @@ function tspo_setup() {
 	);
 
 	// Remove <p> and <br/> from Contact Form 7
-	add_filter('wpcf7_autop_or_not', '__return_false');
+	add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
 	// Get jobs offer in apply form select input
-	add_filter('wpcf7_form_tag', 'dynamic_job_fields');
+	add_filter( 'wpcf7_form_tag', 'dynamic_job_fields' );
 }
 
 add_action( 'after_setup_theme', 'tspo_setup' );
@@ -43,28 +43,29 @@ acf_add_options_page( [
 	'redirect'   => false
 ] );
 
-function dynamic_job_fields($tag)
-{
-	if ($tag['name'] != 'job')
+function dynamic_job_fields( $tag ) {
+	if ( $tag['name'] != 'job' ) {
 		return $tag;
+	}
 
 	$args = array(
-		'posts_per_page' => -1,
-		'post_type' => 'jobs',
-		'orderby' => 'title',
-		'order' => 'ASC',
+		'posts_per_page' => - 1,
+		'post_type'      => 'jobs',
+		'orderby'        => 'title',
+		'order'          => 'ASC',
 	);
 
-	$custom_posts = get_posts($args);
+	$custom_posts = get_posts( $args );
 
-	if (!$custom_posts)
+	if ( ! $custom_posts ) {
 		return $tag;
+	}
 
-	foreach ($custom_posts as $custom_post) {
+	foreach ( $custom_posts as $custom_post ) {
 
 		$tag['raw_values'][] = $custom_post->post_title;
-		$tag['values'][] = $custom_post->post_title;
-		$tag['labels'][] = $custom_post->post_title;
+		$tag['values'][]     = $custom_post->post_title;
+		$tag['labels'][]     = $custom_post->post_title;
 
 	}
 
@@ -97,8 +98,8 @@ register_taxonomy(
 	'clients',
 	'worksites',
 	[
-		'label'             => 'Clients',
-		'labels'            => [
+		'label'              => 'Clients',
+		'labels'             => [
 			'name'          => 'Clients',
 			'singular_name' => 'Client',
 			'all_items'     => 'Tous les clients',
@@ -109,8 +110,10 @@ register_taxonomy(
 			'new_item_name' => 'Nouveau client',
 			'search_items'  => 'Rechercher parmi les clients',
 		],
-		'show_admin_column' => true,
-		'hierarchical'      => false,
+		'show_admin_column'  => true,
+		'show_in_quick_edit' => false,
+		'meta_box_cb'        => false,
+		'hierarchical'       => false,
 	]
 );
 
@@ -234,6 +237,34 @@ function tspo_get_services(): WP_Query {
 	] );
 }
 
+function tspo_get_worksites($client_id = null, $paged = null, $count = 20): WP_Query {
+	$query_args = [
+		'post_type'       => 'worksites',
+		'order'           => 'ASC',
+		'posts_per_page'  => $count,
+		'paged'           => $paged,
+	];
+
+	if ($client_id) {
+		$query_args['tax_query'] = [
+			[
+				'taxonomy' => 'clients',
+				'field'    => 'term_id',
+				'terms'    => $client_id,
+			],
+		];
+	}
+
+	return new WP_Query($query_args);
+}
+
+function tspo_get_clients(): array|WP_Error|string {
+	return get_terms( [
+		'taxonomy'   => 'clients',
+		'hide_empty' => true
+	] );
+}
+
 function tspo_get_roles(): array|WP_Error|string {
 	return get_terms( [
 		'taxonomy'   => 'roles',
@@ -244,10 +275,10 @@ function tspo_get_roles(): array|WP_Error|string {
 function tspo_get_members( $term_id ): array {
 	return get_posts(
 		[
-			'posts_per_page' => -1,
-			'post_type' => 'members',
-			'order'     => 'ASC',
-			'tax_query' => [
+			'posts_per_page' => - 1,
+			'post_type'      => 'members',
+			'order'          => 'ASC',
+			'tax_query'      => [
 				[
 					'taxonomy' => 'roles',
 					'field'    => 'term_id',
@@ -279,6 +310,13 @@ function tspo_get_jobs(): WP_Query {
 	] );
 }
 
+// Fonction permettant d'inclure des "partials" dans la vue et d'y injecter des variables "locales" (uniquement disponibles dans le scope de l'inclusion).
+function tspo_include(string $partial, array $variables = []) {
+	extract($variables);
+
+	include(__DIR__ . '/partials/' . $partial . '.php');
+}
+
 // Add featured image as a custom column
 add_filter( 'manage_members_posts_columns', 'add_featured_image_column' );
 add_action( 'manage_members_posts_custom_column', 'display_featured_image_column_content', 10, 2 );
@@ -306,3 +344,82 @@ function display_featured_image_column_content( $column, $post_id ) {
 		echo get_the_post_thumbnail( $post_id, array( 50, 50 ) );
 	}
 }
+
+//Ajouter les liens de navigations transversales entre les chantiers
+function tspo_previous_post_link( string $post_type ) {
+	if ( get_adjacent_post( false, '', true ) ) {
+		previous_post_link( '%link', '%title' );
+	} else {
+		$first = new WP_Query( 'post_type=worksites&posts_per_page=1&order=DESC' );
+		$first->the_post();
+
+		$html = '<a href="' . get_permalink() . '" class="group flex items-center gap-4">';
+		$html .= '<svg class="arrow h-5 w-6 fill-orange rotate-180 group-hover:-translate-x-2 group-focus:-translate-x-2 transition-transform">';
+		$html .= '<use xlink:href="#arrow"></use>';
+		$html .= '</svg>';
+		$html .= '<span class="flex flex-col">';
+		$html .= '<span class="font-bold tracking-wide text-lg">' . get_the_title() . '</span>';
+		$html .= '<span>' . get_field( 'location' ) . '</span>';
+		$html .= '</span>';
+		$html .= '</a>';
+
+		echo $html;
+
+		wp_reset_query();
+	};
+}
+
+function tspo_next_post_link( string $post_type ) {
+	if ( get_adjacent_post( false, '', false ) ) {
+		next_post_link( '%link', '%title' );
+	} else {
+		$last = new WP_Query( 'post_type=worksites&posts_per_page=1&order=ASC' );
+		$last->the_post();
+
+		$html = '<a href="' . get_permalink() . '" class="group flex flex-row-reverse items-center gap-4">';
+		$html .= '<svg class="arrow h-5 w-6 fill-orange group-hover:translate-x-2 group-focus:translate-x-2 transition-transform">';
+		$html .= '<use xlink:href="#arrow"></use>';
+		$html .= '</svg>';
+		$html .= '<span class="flex flex-col items-end text-end">';
+		$html .= '<span class="font-bold tracking-wide text-lg">' . get_the_title() . '</span>';
+		$html .= '<span>' . get_field( 'location' ) . '</span>';
+		$html .= '</span>';
+		$html .= '</a>';
+
+		echo $html;
+
+		wp_reset_query();
+	};
+}
+
+function custom_next_post_link( $output, $format, $link, $post, $adjacent ) {
+	$output = '<a href="' . get_permalink( $post ) . '" class="group flex flex-row-reverse items-center gap-4">';
+	$output .= '<svg class="arrow h-5 w-6 fill-orange group-hover:translate-x-2 group-focus:translate-x-2 transition-transform">';
+	$output .= '<use xlink:href="#arrow"></use>';
+	$output .= '</svg>';
+	$output .= '<span class="flex flex-col items-end text-end">';
+	$output .= '<span class="font-bold tracking-wide text-lg">' . get_the_title( $post ) . '</span>';
+	$output .= '<span>' . get_field( 'location', $post ) . '</span>';
+	$output .= '</span>';
+	$output .= '</a>';
+
+	return $output;
+}
+
+add_filter( 'next_post_link', 'custom_next_post_link', 10, 5 );
+
+function custom_previous_post_link( $output, $format, $link, $post, $adjacent ) {
+	$output = '<a href="' . get_permalink( $post ) . '" class="group flex items-center gap-4">';
+	$output .= '<svg class="arrow h-5 w-6 fill-orange rotate-180 group-hover:-translate-x-2 group-focus:-translate-x-2 transition-transform">';
+	$output .= '<use xlink:href="#arrow"></use>';
+	$output .= '</svg>';
+	$output .= '<span class="flex flex-col">';
+	$output .= '<span class="font-bold tracking-wide text-lg">' . get_the_title( $post ) . '</span>';
+	$output .= '<span>' . get_field( 'location', $post ) . '</span>';
+	$output .= '</span>';
+	$output .= '</a>';
+
+	return $output;
+}
+
+add_filter( 'previous_post_link', 'custom_previous_post_link', 10, 5 );

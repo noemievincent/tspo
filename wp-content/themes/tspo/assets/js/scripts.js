@@ -5,11 +5,9 @@ window.jQuery = jquery;
 
 import 'slick-carousel';
 
+import './plugins/fancybox';
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Handler when the DOM is fully loaded
-    console.log('js executed...');
-
     init();
 });
 
