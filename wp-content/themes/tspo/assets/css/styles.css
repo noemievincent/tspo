@@ -24,6 +24,7 @@
 @import 'scss/wysiwyg.scss';
 @import 'scss/home/banner.scss';
 @import 'scss/home/services.scss';
+@import 'scss/custom-facebook-feed.scss';
 @import 'scss/references.scss';
 @import 'scss/form.scss';
 
@@ -55,4 +56,3 @@ body.admin-bar {
         @apply grid grid-cols-12 gap-5;
     }
 }
-

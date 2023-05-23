@@ -1,0 +1,72 @@
+.cff-wrapper {
+  * {
+    @apply !float-none !clear-none !p-0 !m-0;
+  }
+
+  #cff {
+    .cff-posts-wrap {
+      @apply flex flex-col gap-4;
+    }
+
+    .cff-item.cff-box {
+      @apply !border !border-blue-darker/40 !bg-white flex flex-col;
+      border: solid;
+
+      .cff-author {
+        @apply grid grid-cols-[60px_1fr] gap-4 !p-4 md:!p-6 md:!pb-4;
+
+        .cff-author-img {
+          @apply !m-0 col-start-1 row-start-1 !w-full !h-full bg-none rounded-none max-h-[60px];
+
+          img {
+            @apply w-full h-full;
+          }
+        }
+
+        .cff-author-text {
+          @apply flex flex-col gap-0.5 md:gap-1 col-start-2 w-fit;
+
+          .cff-page-name, .cff-date {
+            @apply !m-0 w-fit;
+          }
+
+          .cff-page-name {
+            @apply !text-lg md:!text-xl hover:text-orange transition-colors;
+
+            .cff-story {
+              @apply hidden;
+            }
+          }
+        }
+      }
+
+
+      .cff-post-text {
+        @apply max-md:!text-sm !px-4 !mb-4 md:!px-6 md:!mb-6;
+
+        .cff-linebreak {
+          @apply h-0.5;
+        }
+      }
+
+      .cff-media-link {
+        @apply text-xl bg-gray-200 flex items-center justify-center !h-[380px] !my-0;
+      }
+
+      .cff-post-links {
+        @apply flex justify-end border-t border-blue-darker/40 !mx-4 !py-4 md:!mx-6;
+
+        .cff-viewpost-facebook {
+          @apply text-orange font-semibold md:!text-lg no-underline inline-flex items-center gap-3 hover:gap-4 transition-all;
+          &::after {
+            @apply content-[''] h-3 w-5 bg-arrow-line bg-no-repeat;
+          }
+        }
+      }
+
+      .cff-media-link + .cff-post-links {
+        @apply border-none;
+      }
+    }
+  }
+}

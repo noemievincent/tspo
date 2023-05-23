@@ -58,6 +58,7 @@ module.exports = {
       },
       backgroundImage: {
         arrow: 'url("/assets/img/arrow.svg")',
+        "arrow-line": 'url("/assets/img/arrow-line.svg")',
       },
       content: {
         'check': "url('/assets/img/check.svg')",
