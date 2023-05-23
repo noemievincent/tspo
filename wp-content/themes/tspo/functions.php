@@ -136,6 +136,25 @@ register_post_type( 'worksites', [
 	],
 ] );
 
+register_post_type( 'skills', [
+	'label'         => 'Compétences',
+	'labels'        => [
+		'name'          => 'Compétences',
+		'singular_name' => 'Compétence'
+	],
+	'description'   => 'Nos compétences',
+	'menu_position' => 10,
+	'menu_icon'     => 'dashicons-star-filled',
+	'public'        => true,
+	'has_archive'   => false,
+	'show_ui'       => true,
+	'supports'      => [
+		'title',
+		'thumbnail',
+		'editor'
+	],
+] );
+
 register_post_type( 'services', [
 	'label'         => 'Registres de travail',
 	'labels'        => [
@@ -233,6 +252,13 @@ register_post_type( 'jobs', [
 function tspo_get_services(): WP_Query {
 	return new WP_Query( [
 		'post_type' => 'services',
+		'order'     => 'ASC',
+	] );
+}
+
+function tspo_get_skills(): WP_Query {
+	return new WP_Query( [
+		'post_type' => 'skills',
 		'order'     => 'ASC',
 	] );
 }
