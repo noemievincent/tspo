@@ -5,7 +5,7 @@ $services = tspo_get_services();
 	<section aria-labelledby="services" class="services grid-default py-16 rl:py-24">
 		<div class="col-start-2 col-span-10 rl:col-start-2 rl:col-span-11 flex flex-col gap-10">
 			<h2 id="services"
-			    class="text-blue-dark w-fit font-black tracking-wider text-3xl">Les techniques intégrées
+			    class="text-blue-dark w-fit font-black tracking-wider text-2xl rg:text-3xl">Les techniques intégrées
 				pour...</h2>
 			<div class="services-container slider">
 				<?php while ( $services->have_posts() ): $services->the_post(); ?>

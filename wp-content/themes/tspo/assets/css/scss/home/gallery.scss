@@ -1,0 +1,29 @@
+.gallery {
+  .img:hover img, .img:focus img {
+    @apply opacity-60 transition-opacity;
+  }
+
+  .img-4 {
+    @apply rl:col-span-2 rl:row-span-2;
+  }
+
+  .img:nth-child(n+4) {
+    @apply max-md:sr-only;
+  }
+
+  @media screen(md) {
+    .img-3 {
+      @apply max-rl:col-span-2;
+    }
+
+    .img:nth-child(n+4) {
+      @apply max-rl:sr-only;
+    }
+  }
+
+  @media screen(rl) {
+    .img:nth-child(n+7) {
+      @apply sr-only;
+    }
+  }
+}

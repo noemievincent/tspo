@@ -1,7 +1,7 @@
 <section aria-labelledby="news" class="news grid-default pt-16 rl:pt-24">
 	<div class="col-start-2 col-span-10 flex flex-col gap-10">
 		<h2 id="news"
-		    class="text-blue-dark w-fit font-black tracking-wider text-3xl">Actualités à la une</h2>
+		    class="text-blue-dark w-fit font-black tracking-wider text-2xl rg:text-3xl">Actualités à la une</h2>
 		<div class="flex flex-col items-center gap-8">
 			<div class="grid grid-cols-1 md:grid-cols-2 rl:grid-cols-3 xl:grid-cols-4 gap-5">
 				<?php for ( $i = 1; $i <= 3; $i ++ ): ?>

@@ -38,9 +38,9 @@ get_header();
                     </div>
                 </div>
 				<?php if ( $gallery = get_field( 'gallery' ) ): ?>
-                    <section aria-labelledby="gallery" class="bg-blue-light py-16 rl:py-32 rl:px-16 grid-default">
+                    <section aria-labelledby="gallery" class="gallery bg-blue-light py-16 rl:py-32 rl:px-16 grid-default">
                         <h2 id="gallery" class="sr-only">En images</h2>
-                        <div class="gallery col-start-2 col-span-10 grid md:grid-cols-2 rl:grid-cols-3 gap-5">
+                        <div class="col-start-2 col-span-10 grid md:grid-cols-2 rl:grid-cols-3 gap-5">
 							<?php foreach ( $gallery as $i => $img ): ?>
                                 <div class="img img-<?= $i + 1 ?>">
                                     <div class="h-full w-full aspect-[4/3]">
