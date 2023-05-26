@@ -5,6 +5,24 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="title" content="TSPO">
+    <meta name="description" content="Votre partenaire en électricité générale et industrielle. Nous offrons des services complets d'installation, de maintenance et de réparation électrique pour les secteurs résidentiel, commercial et industriel. Faites confiance à notre expertise et à notre équipe qualifiée pour répondre à tous vos besoins électriques. Contactez-nous dès aujourd'hui pour une solution fiable et efficace.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tspo.noemie-vincent.be">
+    <meta property="og:title" content="TSPO">
+    <meta property="og:description" content="Votre partenaire en électricité générale et industrielle. Nous offrons des services complets d'installation, de maintenance et de réparation électrique pour les secteurs résidentiel, commercial et industriel. Faites confiance à notre expertise et à notre équipe qualifiée pour répondre à tous vos besoins électriques. Contactez-nous dès aujourd'hui pour une solution fiable et efficace.">
+    <meta property="og:image" content="/wp-content/themes/tspo/assets/img/meta-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tspo.noemie-vincent.be">
+    <meta property="twitter:title" content="TSPO">
+    <meta property="twitter:description" content="Votre partenaire en électricité générale et industrielle. Nous offrons des services complets d'installation, de maintenance et de réparation électrique pour les secteurs résidentiel, commercial et industriel. Faites confiance à notre expertise et à notre équipe qualifiée pour répondre à tous vos besoins électriques. Contactez-nous dès aujourd'hui pour une solution fiable et efficace.">
+    <meta property="twitter:image" content="/wp-content/themes/tspo/assets/img/meta-image.png">
+
 	<?php wp_head() ?>
 </head>
 <body <?php body_class( 'no-js flex flex-col h-screen font-lato bg-orange-light text-blue-dark selection:bg-blue selection:text-white' ) ?>>
