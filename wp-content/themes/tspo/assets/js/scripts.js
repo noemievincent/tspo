@@ -16,6 +16,7 @@ function init() {
     document.body.classList.add('js-enabled');
 
     servicesSlider();
+    principlesSlider();
 }
 
 function servicesSlider() {
@@ -47,5 +48,28 @@ function servicesSlider() {
 
     });
 }
+
+function principlesSlider() {
+    $(".about .principles .slider").slick({
+        infinite: true,
+
+        mobileFirst: true,
+
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        swipeToSlide: true,
+
+        arrows: true,
+        prevArrow: $('.prev'),
+        nextArrow: $('.next'),
+
+        dots: true,
+        customPaging: function(slider, index) {
+            return '<span class="slick-number">' + (index + 1) + '</span>';
+        }
+
+    });
+}
+
 
 

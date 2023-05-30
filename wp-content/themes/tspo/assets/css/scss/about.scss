@@ -1,0 +1,64 @@
+.about {
+  .principles {
+    .slick-slider {
+      @apply m-0;
+
+      .slick-track {
+        &::before, &::after {
+          @apply content-none;
+        }
+
+        .slick-slide {
+          > div {
+            @apply flex items-center justify-center;
+          }
+        }
+      }
+
+      .slick-dots {
+        @apply mt-6 rg:m-0 max-rg:static rg:-bottom-12 text-blue flex items-end justify-center gap-2;
+
+        li {
+          @apply w-fit h-fit m-0 hover:text-orange focus:text-orange transition-all;
+          &.slick-active {
+            @apply font-semibold text-xl text-orange ;
+          }
+        }
+      }
+    }
+
+    .arrow {
+      @apply absolute z-10 p-0 max-rg:bottom-0 rg:top-1/2 -translate-y-1/2;
+      svg {
+        @apply w-5 h-4 rg:w-6 rg:h-5 fill-blue transition-colors;
+      }
+      &:hover, &:focus {
+        svg {
+          @apply fill-orange;
+        }
+      }
+      &.prev {
+        @apply left-0 rg:-left-14 rl:-left-12 xl:-left-8;
+      }
+      &.next {
+        @apply right-0 rg:-right-14 rl:-right-12 xl:-right-8;
+      }
+    }
+  }
+
+
+  .values {
+    .value-item {
+      @apply col-span-full md:col-span-5 rl:col-span-3;
+
+      &.value-3, &.value-4 {
+        @apply rl:row-start-2;
+      }
+
+      &.value-5 {
+        @apply md:col-span-full rl:col-span-4 rl:col-end-11 rl:row-span-2 px-10 lg:px-20;
+      }
+    }
+  }
+
+}
