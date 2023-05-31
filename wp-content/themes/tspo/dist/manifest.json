@@ -3,33 +3,33 @@
     "file": "assets/ajax-loader-e7b44c86.gif",
     "src": "node_modules/slick-carousel/slick/ajax-loader.gif"
   },
-  "assets/img/arrow.svg": {
-    "file": "assets/arrow-f1a2e6cd.svg",
-    "src": "assets/img/arrow.svg"
-  },
   "assets/img/arrow-line.svg": {
     "file": "assets/arrow-line-fc765cfd.svg",
     "src": "assets/img/arrow-line.svg"
   },
-  "assets/img/check.svg": {
-    "file": "assets/check-a543b896.svg",
-    "src": "assets/img/check.svg"
+  "assets/img/arrow.svg": {
+    "file": "assets/arrow-f1a2e6cd.svg",
+    "src": "assets/img/arrow.svg"
   },
   "assets/fonts/Lato/Lato-Light.ttf": {
     "file": "assets/Lato-Light-e9d59afb.ttf",
     "src": "assets/fonts/Lato/Lato-Light.ttf"
   },
+  "assets/img/check.svg": {
+    "file": "assets/check-a543b896.svg",
+    "src": "assets/img/check.svg"
+  },
   "assets/fonts/Lato/Lato-Regular.ttf": {
     "file": "assets/Lato-Regular-6f6940be.ttf",
     "src": "assets/fonts/Lato/Lato-Regular.ttf"
   },
-  "assets/fonts/Lato/Lato-Bold.ttf": {
-    "file": "assets/Lato-Bold-bf1b8130.ttf",
-    "src": "assets/fonts/Lato/Lato-Bold.ttf"
-  },
   "assets/fonts/Lato/Lato-Semibold.ttf": {
     "file": "assets/Lato-Semibold-2dc5d31e.ttf",
     "src": "assets/fonts/Lato/Lato-Semibold.ttf"
+  },
+  "assets/fonts/Lato/Lato-Bold.ttf": {
+    "file": "assets/Lato-Bold-bf1b8130.ttf",
+    "src": "assets/fonts/Lato/Lato-Bold.ttf"
   },
   "assets/fonts/Lato/Lato-Black.ttf": {
     "file": "assets/Lato-Black-4ed66fa3.ttf",
@@ -44,15 +44,15 @@
     "src": "node_modules/slick-carousel/slick/fonts/slick.svg"
   },
   "main.css": {
-    "file": "assets/main-2508b8ce.css",
+    "file": "assets/main-f995961a.css",
     "src": "main.css"
   },
   "main.js": {
-    "file": "assets/main-56f62da4.js",
+    "file": "assets/main-318fdc6f.js",
     "src": "main.js",
     "isEntry": true,
     "css": [
-      "assets/main-2508b8ce.css"
+      "assets/main-f995961a.css"
     ],
     "assets": [
       "assets/ajax-loader-e7b44c86.gif",
