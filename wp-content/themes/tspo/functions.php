@@ -263,15 +263,15 @@ function tspo_get_skills(): WP_Query {
 	] );
 }
 
-function tspo_get_worksites($client_id = null, $paged = null, $count = 20): WP_Query {
+function tspo_get_worksites( $client_id = null, $paged = null, $count = 20 ): WP_Query {
 	$query_args = [
-		'post_type'       => 'worksites',
-		'order'           => 'ASC',
-		'posts_per_page'  => $count,
-		'paged'           => $paged,
+		'post_type'      => 'worksites',
+		'order'          => 'ASC',
+		'posts_per_page' => $count,
+		'paged'          => $paged,
 	];
 
-	if ($client_id) {
+	if ( $client_id ) {
 		$query_args['tax_query'] = [
 			[
 				'taxonomy' => 'clients',
@@ -281,7 +281,7 @@ function tspo_get_worksites($client_id = null, $paged = null, $count = 20): WP_Q
 		];
 	}
 
-	return new WP_Query($query_args);
+	return new WP_Query( $query_args );
 }
 
 function tspo_get_clients(): array|WP_Error|string {
@@ -337,10 +337,10 @@ function tspo_get_jobs(): WP_Query {
 }
 
 // Fonction permettant d'inclure des "partials" dans la vue et d'y injecter des variables "locales" (uniquement disponibles dans le scope de l'inclusion).
-function tspo_include(string $partial, array $variables = []) {
-	extract($variables);
+function tspo_include( string $partial, array $variables = [] ) {
+	extract( $variables );
 
-	include(__DIR__ . '/partials/' . $partial . '.php');
+	include( __DIR__ . '/partials/' . $partial . '.php' );
 }
 
 // Add featured image as a custom column
@@ -449,3 +449,32 @@ function custom_previous_post_link( $output, $format, $link, $post, $adjacent ) 
 }
 
 add_filter( 'previous_post_link', 'custom_previous_post_link', 10, 5 );
+
+
+function get_home_gallery() {
+	$worksites = get_posts( array(
+		'post_type'      => 'worksites',
+		'orderby'        => 'rand',
+		'posts_per_page' => - 1,
+	) );
+
+	if ( $worksites ) {
+		$galleries = [];
+		foreach ( $worksites as $worksite ) {
+			$galleries[] = get_field( 'gallery', $worksite->ID );
+		}
+
+		$images = [];
+		foreach ( $galleries as $gallery ) {
+			if ($gallery) {
+				foreach ( $gallery as $img ) {
+					if ( ! in_array( $img['ID'], array_column( $images, 'ID' ) ) ) {
+						$images[] = $img;
+					}
+				}
+			}
+		}
+
+		return $images;
+	}
+}

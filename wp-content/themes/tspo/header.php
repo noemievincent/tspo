@@ -64,7 +64,7 @@
 					'menu_class' => 'header-nav w-full flex gap-4 items-center justify-center rl:justify-end flex-col rl:gap-8 rl:flex-row',
 					'container'  => false
 				] ) ?>
-				<a href="<?= get_field('facebook', 'options') ?>" class="group rl:pl-6">
+				<a href="<?= get_field('facebook', 'options') ?>" target="_blank" class="group rl:pl-6">
 					<span class="sr-only">Facebook</span>
 					<svg class="facebook h-5 w-3 fill-blue-dark group-hover:fill-orange group-focus:fill-orange transition-colors">
 						<use xlink:href="#facebook"></use>
