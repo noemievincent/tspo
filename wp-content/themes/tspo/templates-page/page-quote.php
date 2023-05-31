@@ -1,6 +1,6 @@
 <?php //Template Name: Devis
 get_header(); ?>
-	<div class="contact grid-default my-12 rl:my-24 gap-y-6 rl:gap-y-8">
+	<div class="quote grid-default my-12 rl:my-24 gap-y-6 rl:gap-y-8">
 		<h1 class="col-start-2 col-span-10 text-blue-dark w-fit font-black text-4xl rl:tracking-wider rl:text-5xl">Contactez-nous</h1>
 		<div
 			class="col-start-1 col-span-12 rl:col-start-2 rl:col-span-11 flex flex-col max-rg:items-center gap-8 rl:gap-12">

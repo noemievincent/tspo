@@ -9,7 +9,7 @@ $skills = tspo_get_skills();
 				<?php while ( $skills->have_posts() ): $skills->the_post(); ?>
                     <article aria-labelledby="<?= sanitize_title( get_the_title() ) ?>" class="col-span-full rl:col-span-5 relative">
                         <div class="flex items-center gap-3 w-fit bg-white absolute px-4 ml-4 -top-4 rl:ml-6 rl:-top-5 lg:ml-12">
-                            <div class="h-12 rl:h-14">
+                            <div class="w-12 h-12 rl:w-14 rl:h-14">
                                 <img src="<?= get_the_post_thumbnail_url() ?>" alt=""
                                      class="style-svg fill-orange h-full w-full object-contain">
                             </div>

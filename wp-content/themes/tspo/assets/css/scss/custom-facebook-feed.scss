@@ -4,19 +4,14 @@
   }
 
   #cff {
-    .cff-posts-wrap {
-      @apply flex flex-col gap-4;
-    }
-
     .cff-item.cff-box {
-      @apply !border !border-blue-darker/40 !bg-white flex flex-col;
-      border: solid;
+      @apply !border !border-solid !border-blue-darker/20 !bg-white flex flex-col;
 
       .cff-author {
-        @apply grid grid-cols-[60px_1fr] gap-4 !p-4 md:!p-6 md:!pb-4;
+        @apply grid grid-cols-[50px_1fr] gap-4 !p-4 md:!p-6 md:!pb-4;
 
         .cff-author-img {
-          @apply !m-0 col-start-1 row-start-1 !w-full !h-full bg-none rounded-none max-h-[60px];
+          @apply !m-0 col-start-1 row-start-1 !w-full !h-full bg-none rounded-none max-h-[50px];
 
           img {
             @apply w-full h-full;
@@ -50,11 +45,11 @@
       }
 
       .cff-media-link {
-        @apply text-xl bg-gray-200 flex items-center justify-center !h-[380px] !my-0;
+        @apply text-xl bg-gray-200 flex items-center justify-center !h-[340px] !my-0;
       }
 
       .cff-post-links {
-        @apply flex justify-end border-t border-blue-darker/40 !mx-4 !py-4 md:!mx-6;
+        @apply !mt-auto flex justify-end border-t border-blue-darker/20 !mx-4 !py-4 md:!mx-6;
 
         .cff-viewpost-facebook {
           @apply text-orange font-semibold md:!text-lg no-underline inline-flex items-center gap-3 hover:gap-4 transition-all;
@@ -68,5 +63,17 @@
         @apply border-none;
       }
     }
+  }
+}
+
+.home-wrapper {
+  .cff-posts-wrap {
+    @apply grid grid-cols-1 md:grid-cols-2 rl:grid-cols-3 xl:grid-cols-4 gap-5;
+  }
+}
+
+.news-wrapper {
+  .cff-posts-wrap {
+    @apply flex flex-col gap-4;
   }
 }

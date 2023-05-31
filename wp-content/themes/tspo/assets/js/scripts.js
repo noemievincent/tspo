@@ -15,6 +15,7 @@ function init() {
     document.body.classList.remove('no-js');
     document.body.classList.add('js-enabled');
 
+    burgerMenu();
     servicesSlider();
     principlesSlider();
 }
@@ -68,6 +69,35 @@ function principlesSlider() {
             return '<span class="slick-number">' + (index + 1) + '</span>';
         }
 
+    });
+}
+
+function burgerMenu() {
+    const checkbox = document.getElementById('toggle');
+    const menuItems = document.querySelectorAll('.menu-item-has-children');
+
+    menuItems.forEach((item, index) => {
+        item.querySelector('a').addEventListener('click', (e) => {
+            if (checkbox.checked) {
+                e.preventDefault();
+
+                menuItems.forEach((it, i) => {
+                    if (i !== index) {
+                        it.classList.remove('opened');
+                    }
+                });
+
+                item.classList.toggle('opened');
+            }
+        });
+    });
+
+    checkbox.addEventListener('change', (e) => {
+        if (!checkbox.checked) {
+            menuItems.forEach((item, i) => {
+                item.classList.remove('opened');
+            });
+        }
     });
 }
 

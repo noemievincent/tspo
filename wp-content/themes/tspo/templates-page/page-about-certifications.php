@@ -13,7 +13,7 @@ $certifications = tspo_get_certifications();
 						<h2 id="<?= sanitize_title( get_the_title() ) ?>" class="text-xl font-semibold">
 							<?php if ( get_field( 'link' ) ): ?>
 							<a href="<?= get_field( 'link' ) ?>" target="_blank"
-							   class="group flex items-center gap-3 hover:text-orange focus:text-orange transition-all">
+							   class="group w-fit flex items-center gap-3 hover:text-orange focus:text-orange transition-all">
 								<?php endif; ?>
 								<span><?= get_the_title() ?></span>
 								<?php if ( get_field( 'link' ) ): ?>

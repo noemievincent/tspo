@@ -1,9 +1,0 @@
-.pagination {
-  .page-numbers:not(.next, .prev) {
-    @apply h-7 w-7 flex items-center justify-center rounded-full border border-transparent hover:border-orange/40 focus:border-orange/40 hover:text-orange focus:text-orange transition-colors;
-  }
-
-  .current.page-numbers:not(.next, .prev) {
-    @apply cursor-default h-7 w-7 flex items-center justify-center rounded-full bg-blue/10 border border-blue/40 hover:text-blue focus:text-blue;
-  }
-}

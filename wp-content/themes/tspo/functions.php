@@ -379,7 +379,7 @@ function tspo_previous_post_link( string $post_type ) {
 		$first = new WP_Query( 'post_type=worksites&posts_per_page=1&order=DESC' );
 		$first->the_post();
 
-		$html = '<a href="' . get_permalink() . '" class="group flex items-center gap-4">';
+		$html = '<a href="' . get_permalink() . '" class="group w-fit flex items-center gap-4">';
 		$html .= '<svg class="arrow h-5 w-6 fill-orange rotate-180 group-hover:-translate-x-2 group-focus:-translate-x-2 transition-transform">';
 		$html .= '<use xlink:href="#arrow"></use>';
 		$html .= '</svg>';
@@ -402,7 +402,7 @@ function tspo_next_post_link( string $post_type ) {
 		$last = new WP_Query( 'post_type=worksites&posts_per_page=1&order=ASC' );
 		$last->the_post();
 
-		$html = '<a href="' . get_permalink() . '" class="group flex flex-row-reverse items-center gap-4">';
+		$html = '<a href="' . get_permalink() . '" class="group w-fit flex flex-row-reverse items-center gap-4">';
 		$html .= '<svg class="arrow h-5 w-6 fill-orange group-hover:translate-x-2 group-focus:translate-x-2 transition-transform">';
 		$html .= '<use xlink:href="#arrow"></use>';
 		$html .= '</svg>';
@@ -419,7 +419,7 @@ function tspo_next_post_link( string $post_type ) {
 }
 
 function custom_next_post_link( $output, $format, $link, $post, $adjacent ) {
-	$output = '<a href="' . get_permalink( $post ) . '" class="group flex flex-row-reverse items-center gap-4">';
+	$output = '<a href="' . get_permalink( $post ) . '" class="group w-fit flex flex-row-reverse items-center gap-4">';
 	$output .= '<svg class="arrow h-5 w-6 fill-orange group-hover:translate-x-2 group-focus:translate-x-2 transition-transform">';
 	$output .= '<use xlink:href="#arrow"></use>';
 	$output .= '</svg>';
@@ -435,7 +435,7 @@ function custom_next_post_link( $output, $format, $link, $post, $adjacent ) {
 add_filter( 'next_post_link', 'custom_next_post_link', 10, 5 );
 
 function custom_previous_post_link( $output, $format, $link, $post, $adjacent ) {
-	$output = '<a href="' . get_permalink( $post ) . '" class="group flex items-center gap-4">';
+	$output = '<a href="' . get_permalink( $post ) . '" class="group w-fit flex items-center gap-4">';
 	$output .= '<svg class="arrow h-5 w-6 fill-orange rotate-180 group-hover:-translate-x-2 group-focus:-translate-x-2 transition-transform">';
 	$output .= '<use xlink:href="#arrow"></use>';
 	$output .= '</svg>';

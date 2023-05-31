@@ -2,7 +2,7 @@
 get_header();
 $jobs = tspo_get_jobs();
 ?>
-	<div class="certifications grid-default mt-12 rl:mt-24">
+	<div class="jobs grid-default mt-12 rl:mt-24">
 		<div
 			class="col-start-2 col-span-10 xl:col-start-3 xl:col-span-9 flex flex-col max-rg:items-center gap-8 rl:gap-12">
 			<h1 class="text-blue-dark w-fit font-black text-4xl rl:tracking-wider rl:text-5xl"><?= the_title(); ?></h1>

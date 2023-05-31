@@ -20,14 +20,12 @@
 @import 'slick-carousel/slick/slick-theme.css';
 
 @import 'scss/fonts.scss';
-@import 'scss/header.scss';
-@import 'scss/wysiwyg.scss';
+@import 'scss/commons.scss';
 @import 'scss/home/banner.scss';
 @import 'scss/home/services.scss';
 @import 'scss/home/gallery.scss';
 @import 'scss/custom-facebook-feed.scss';
 @import 'scss/about.scss';
-@import 'scss/references.scss';
 @import 'scss/form.scss';
 
 @import 'scss/no-js.scss';
@@ -37,21 +35,9 @@ body.admin-bar {
     max-height: calc(100vh - 32px);
 }
 
-*:not(path) {
-    /*outline: deeppink dashed 1px;*/
-}
-
 @layer base {
     .wysiwyg {
         @apply max-w-prose leading-7 rg:text-lg rg:leading-8 flex flex-col gap-2.5 rg:gap-4;
-    }
-
-    .cut-text {
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
     }
 
     .grid-default {

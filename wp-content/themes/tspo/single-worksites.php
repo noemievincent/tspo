@@ -37,26 +37,28 @@ get_header();
                         </div>
                     </div>
                 </div>
-				<?php if ( $gallery = get_field( 'gallery' ) ): ?>
-                    <section aria-labelledby="gallery" class="gallery bg-blue-light py-16 rl:py-32 rl:px-16 grid-default">
-                        <h2 id="gallery" class="sr-only">En images</h2>
-                        <div class="col-start-2 col-span-10 grid md:grid-cols-2 rl:grid-cols-3 gap-5">
-							<?php foreach ( $gallery as $i => $img ): ?>
-                                <div class="img img-<?= $i + 1 ?>">
-                                    <div class="h-full w-full aspect-[4/3]">
-                                        <a href="<?= $img['url'] ?>" data-fancybox="gallery"
-                                           data-caption="<?= $img['caption'] ?>">
-                                            <img src="<?= $img['url'] ?>" alt="<?= $img['alt'] ?>"
-                                                 class="h-full w-full object-cover">
-                                        </a>
+				<?php if ( get_field( 'gallery' ) ): ?>
+                    <section aria-labelledby="gallery" class="gallery bg-blue-light py-16 rl:py-28 rl:px-16 grid-default">
+                        <div class="col-start-2 col-span-10 text-center flex flex-col items-center gap-6 rg:gap-10">
+                            <h2 id="gallery" class="sr-only">En images</h2>
+                            <div class="grid md:grid-cols-2 rl:grid-cols-3 gap-5">
+								<?php foreach ( get_field( 'gallery' ) as $i => $img ): ?>
+                                    <div class="img img-<?= $i + 1 ?>">
+                                        <div class="h-full w-full aspect-[4/3]">
+                                            <a href="<?= $img['url'] ?>" data-fancybox="gallery"
+                                               data-caption="<?= $img['caption'] ?>">
+                                                <img src="<?= $img['url'] ?>" alt="<?= $img['alt'] ?>"
+                                                     class="h-full w-full object-cover">
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-							<?php endforeach; ?>
+								<?php endforeach; ?>
+                            </div>
                         </div>
                     </section>
 				<?php endif; ?>
                 <div class="grid-default">
-                    <div class="col-start-2 col-span-10 flex justify-between gap-4 max-md:flex-col">
+                    <div class="col-start-2 col-span-10 flex justify-between gap-2 rl:gap-4">
 						<?php tspo_previous_post_link( 'worksites' ); ?>
 						<?php tspo_next_post_link( 'worksites' ); ?>
                     </div>

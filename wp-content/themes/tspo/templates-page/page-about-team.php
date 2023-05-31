@@ -13,7 +13,7 @@ $roles = tspo_get_roles();
 						<div class="flex flex-wrap max-rg:justify-center gap-5 rl:gap-10 gap-y-5">
 							<?php foreach ( $members as $member ): ?>
 								<article aria-labelledby="<?= sanitize_title( $member->post_title ) ?>" class="flex flex-col items-center border border-blue-dark/20 sm:w-64">
-									<div class="aspect-square">
+									<div class="aspect-square overflow-hidden">
 										<img src="<?= get_the_post_thumbnail_url($member->ID) ?>" alt="" class="h-full w-full object-cover">
 									</div>
 									<div class="flex flex-col items-center justify-end py-4 px-2 text-center">

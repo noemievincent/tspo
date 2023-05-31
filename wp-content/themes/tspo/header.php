@@ -63,7 +63,7 @@
 				<?= wp_nav_menu( [
 					'menu'       => 'Navigation principale',
 					'menu_id'    => 'header-nav',
-					'menu_class' => 'header-nav w-full flex gap-8 items-center justify-center rl:justify-end flex-col rl:gap-5 lg:gap-8 rl:flex-row',
+					'menu_class' => 'header-nav w-full flex gap-4 items-center justify-center rl:justify-end flex-col rl:gap-8 rl:flex-row',
 					'container'  => false
 				] ) ?>
 				<a href="<?= get_field('facebook', 'options') ?>" class="group rl:pl-6">

@@ -9,12 +9,12 @@ $link  = get_field( 'banner_link' );
 		<img src="<?= $img['url'] ?>" alt="<?= $img['alt'] ?>"
 		     class="w-full h-full object-cover">
 	</div>
-	<div class="absolute top-0 z-10 w-full h-full bg-blue-darker/70 py-24">
+	<div class="absolute top-0 z-10 w-full h-full bg-blue-darker/70 my-auto">
 		<div class="h-full text-white grid-default items-center">
 			<div class="col-start-2 col-span-10 flex flex-col gap-16 rg:col-start-2 rg:col-span-8 rg:gap-20 lg:col-start-2 lg:col-span-6 lg:gap-28">
 				<div class="flex flex-col gap-6 rg:gap-8 lg:gap-10">
-					<h2 id="banner" class="w-fit font-black tracking-wide text-2xl rg:text-3xl md:text-4xl rg:text-5xl lg:text-6xl"><?= $title ?></h2>
-					<div class="font-light text-lg leading-relaxed md:text-xl md:leading-relaxed rg:text-2xl rg:leading-relaxed lg:text-3xl lg:leading-normal"><?= $desc ?></div>
+					<h2 id="banner" class="w-fit font-black tracking-wide text-2xl md:text-3xl rg:text-4xl lg:text-5xl xl:text-6xl"><?= $title ?></h2>
+					<div class="font-light text-lg leading-relaxed md:text-xl md:leading-relaxed rg:text-2xl rg:leading-relaxed xl:text-3xl lg:leading-normal"><?= $desc ?></div>
 				</div>
 				<a href="<?= $link['url'] ?>"
 				   class="w-fit tracking-wide text-xl flex items-center gap-2 hover:gap-5 focus:gap-5 transition-all">
@@ -24,7 +24,7 @@ $link  = get_field( 'banner_link' );
 					</svg>
 				</a>
 			</div>
-			<div class="absolute bottom-0 right-0 w-fit p-6 rg:p-8 lg:p-10">
+			<div class="absolute bottom-0 right-0 w-full rg:w-fit p-6 rg:p-8 lg:p-10">
 				<a href="#content"
 					class="text-white fill-orange text-center flex items-center flex-col gap-4 justify-end rg:text-lg rg:leading-6 rg:items-end rg:flex-row rg:gap-4 rg:text-end">
 					<p class="tracking-wider font-light"><strong class="font-semibold">Faites défiler la

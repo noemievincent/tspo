@@ -22,7 +22,7 @@ get_header(); ?>
                     <div class="col-span-full max-md:px-6 md:col-start-2 md:col-span-10 rg:col-start-3 rg:col-span-8 lg:col-start-4 lg:col-span-6 2xl:col-start-5 2xl:col-span-4">
                         <p class="text-center text-blue-dark font-black tracking-wider text-2xl rg:text-3xl mb-6 rg:mb-10"><?= get_field( 'principles_title' ) ?></p>
                         <div class="principles-container relative">
-                            <div class="arrow prev group cursor-pointer w-fit max-rg:hidden">
+                            <div class="arrow prev group cursor-pointer w-fit">
                                 <svg class="rotate-180">
                                     <use xlink:href="#arrow"></use>
                                 </svg>
@@ -34,7 +34,7 @@ get_header(); ?>
                                     </div>
 		                        <?php endforeach; ?>
                             </div>
-                            <div class="arrow next group cursor-pointer w-fit max-rg:hidden">
+                            <div class="arrow next group cursor-pointer w-fit">
                                 <svg class="">
                                     <use xlink:href="#arrow"></use>
                                 </svg>
@@ -48,13 +48,13 @@ get_header(); ?>
                             class="text-center text-blue-dark font-black tracking-wider text-2xl rg:text-3xl"><?= get_field( 'values_title' ) ?></h2>
                         <div class="grid grid-cols-10 gap-5">
 							<?php foreach ( get_field( 'values' ) as $i => $item ) : ?>
-                                <article aria-labelledby="<?= sanitize_title( $item['value_name'] ) ?>" class="value-item value-<?= $i + 1 ?> bg-white border border-blue-darker/40 flex flex-col justify-center gap-3 p-6 lg:py-10">
+                                <article aria-labelledby="<?= sanitize_title( $item['value_name'] ) ?>" class="value-item value-<?= $i + 1 ?> bg-white border border-blue-darker/40 flex flex-col gap-3 p-6 lg:py-10">
                                     <div class="flex items-center gap-4">
-                                        <div class="h-8">
+                                        <div class="w-8 h-8">
                                             <img src="<?= $item['value_icon']['url'] ?>" alt=""
                                                  class="style-svg fill-orange h-full w-full object-contain">
                                         </div>
-                                        <h3 id="<?= sanitize_title( $item['value_name'] ) ?>" class="text-xl rl:text-2xl font-bold uppercase tracking-wide"><?= $item['value_name'] ?></h3>
+                                        <h3 id="<?= sanitize_title( $item['value_name'] ) ?>" class="text-xl lg:text-2xl font-bold uppercase tracking-wide"><?= $item['value_name'] ?></h3>
                                     </div>
                                     <div class="rl:text-lg max-w-prose">
                                         <?= $item['value_description'] ?>

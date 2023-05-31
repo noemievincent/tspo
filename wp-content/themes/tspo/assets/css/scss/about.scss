@@ -56,7 +56,7 @@
       }
 
       &.value-5 {
-        @apply md:col-span-full rl:col-span-4 rl:col-end-11 rl:row-span-2 px-10 lg:px-20;
+        @apply rl:justify-center md:col-span-full rl:col-span-4 rl:col-end-11 rl:row-span-2 rl:px-10 lg:px-20;
       }
     }
   }
