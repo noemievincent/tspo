@@ -58,7 +58,7 @@ get_header();
                     </section>
 				<?php endif; ?>
                 <div class="grid-default">
-                    <div class="col-start-2 col-span-10 flex justify-between gap-2 rl:gap-4">
+                    <div class="col-start-2 col-span-10 grid grid-cols-2 gap-4">
 						<?php tspo_previous_post_link( 'worksites' ); ?>
 						<?php tspo_next_post_link( 'worksites' ); ?>
                     </div>

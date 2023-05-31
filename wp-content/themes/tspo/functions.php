@@ -384,8 +384,8 @@ function tspo_previous_post_link( string $post_type ) {
 		$html .= '<use xlink:href="#arrow"></use>';
 		$html .= '</svg>';
 		$html .= '<span class="flex flex-col">';
-		$html .= '<span class="font-bold tracking-wide text-lg">' . get_the_title() . '</span>';
-		$html .= '<span>' . get_field( 'location' ) . '</span>';
+		$html .= '<span class="font-bold tracking-wide text-lg line-clamp-1">' . get_the_title() . '</span>';
+		$html .= '<span class="max-md:sr-only">' . get_field( 'location' ) . '</span>';
 		$html .= '</span>';
 		$html .= '</a>';
 
@@ -402,13 +402,13 @@ function tspo_next_post_link( string $post_type ) {
 		$last = new WP_Query( 'post_type=worksites&posts_per_page=1&order=ASC' );
 		$last->the_post();
 
-		$html = '<a href="' . get_permalink() . '" class="group w-fit flex flex-row-reverse items-center gap-4">';
+		$html = '<a href="' . get_permalink() . '" class="group justify-self-end w-fit flex flex-row-reverse items-center gap-4">';
 		$html .= '<svg class="arrow h-5 w-6 fill-orange group-hover:translate-x-2 group-focus:translate-x-2 transition-transform">';
 		$html .= '<use xlink:href="#arrow"></use>';
 		$html .= '</svg>';
 		$html .= '<span class="flex flex-col items-end text-end">';
-		$html .= '<span class="font-bold tracking-wide text-lg">' . get_the_title() . '</span>';
-		$html .= '<span>' . get_field( 'location' ) . '</span>';
+		$html .= '<span class="font-bold tracking-wide text-lg line-clamp-1">' . get_the_title() . '</span>';
+		$html .= '<span class="max-md:sr-only">' . get_field( 'location' ) . '</span>';
 		$html .= '</span>';
 		$html .= '</a>';
 
@@ -419,13 +419,13 @@ function tspo_next_post_link( string $post_type ) {
 }
 
 function custom_next_post_link( $output, $format, $link, $post, $adjacent ) {
-	$output = '<a href="' . get_permalink( $post ) . '" class="group w-fit flex flex-row-reverse items-center gap-4">';
+	$output = '<a href="' . get_permalink( $post ) . '" class="group justify-self-end w-fit flex flex-row-reverse items-center gap-4">';
 	$output .= '<svg class="arrow h-5 w-6 fill-orange group-hover:translate-x-2 group-focus:translate-x-2 transition-transform">';
 	$output .= '<use xlink:href="#arrow"></use>';
 	$output .= '</svg>';
 	$output .= '<span class="flex flex-col items-end text-end">';
-	$output .= '<span class="font-bold tracking-wide text-lg">' . get_the_title( $post ) . '</span>';
-	$output .= '<span>' . get_field( 'location', $post ) . '</span>';
+	$output .= '<span class="font-bold tracking-wide text-lg line-clamp-1">' . get_the_title( $post ) . '</span>';
+	$output .= '<span class="max-md:sr-only">' . get_field( 'location', $post ) . '</span>';
 	$output .= '</span>';
 	$output .= '</a>';
 
@@ -440,8 +440,8 @@ function custom_previous_post_link( $output, $format, $link, $post, $adjacent ) 
 	$output .= '<use xlink:href="#arrow"></use>';
 	$output .= '</svg>';
 	$output .= '<span class="flex flex-col">';
-	$output .= '<span class="font-bold tracking-wide text-lg">' . get_the_title( $post ) . '</span>';
-	$output .= '<span>' . get_field( 'location', $post ) . '</span>';
+	$output .= '<span class="font-bold tracking-wide text-lg line-clamp-1">' . get_the_title( $post ) . '</span>';
+	$output .= '<span class="max-md:sr-only">' . get_field( 'location', $post ) . '</span>';
 	$output .= '</span>';
 	$output .= '</a>';
 
