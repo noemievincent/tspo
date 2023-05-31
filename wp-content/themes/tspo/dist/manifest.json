@@ -11,26 +11,6 @@
     "file": "assets/arrow-line-fc765cfd.svg",
     "src": "assets/img/arrow-line.svg"
   },
-  "assets/img/check.svg": {
-    "file": "assets/check-a543b896.svg",
-    "src": "assets/img/check.svg"
-  },
-  "assets/fonts/Lato/Lato-Semibold.ttf": {
-    "file": "assets/Lato-Semibold-2dc5d31e.ttf",
-    "src": "assets/fonts/Lato/Lato-Semibold.ttf"
-  },
-  "assets/fonts/Lato/Lato-Black.ttf": {
-    "file": "assets/Lato-Black-4ed66fa3.ttf",
-    "src": "assets/fonts/Lato/Lato-Black.ttf"
-  },
-  "assets/fonts/Lato/Lato-Bold.ttf": {
-    "file": "assets/Lato-Bold-bf1b8130.ttf",
-    "src": "assets/fonts/Lato/Lato-Bold.ttf"
-  },
-  "assets/fonts/Lato/Lato-Heavy.ttf": {
-    "file": "assets/Lato-Heavy-4ce7ec20.ttf",
-    "src": "assets/fonts/Lato/Lato-Heavy.ttf"
-  },
   "assets/fonts/Lato/Lato-Regular.ttf": {
     "file": "assets/Lato-Regular-6f6940be.ttf",
     "src": "assets/fonts/Lato/Lato-Regular.ttf"
@@ -39,12 +19,32 @@
     "file": "assets/Lato-Light-e9d59afb.ttf",
     "src": "assets/fonts/Lato/Lato-Light.ttf"
   },
+  "assets/img/check.svg": {
+    "file": "assets/check-a543b896.svg",
+    "src": "assets/img/check.svg"
+  },
+  "assets/fonts/Lato/Lato-Semibold.ttf": {
+    "file": "assets/Lato-Semibold-2dc5d31e.ttf",
+    "src": "assets/fonts/Lato/Lato-Semibold.ttf"
+  },
+  "assets/fonts/Lato/Lato-Bold.ttf": {
+    "file": "assets/Lato-Bold-bf1b8130.ttf",
+    "src": "assets/fonts/Lato/Lato-Bold.ttf"
+  },
+  "assets/fonts/Lato/Lato-Black.ttf": {
+    "file": "assets/Lato-Black-4ed66fa3.ttf",
+    "src": "assets/fonts/Lato/Lato-Black.ttf"
+  },
+  "assets/fonts/Lato/Lato-Heavy.ttf": {
+    "file": "assets/Lato-Heavy-4ce7ec20.ttf",
+    "src": "assets/fonts/Lato/Lato-Heavy.ttf"
+  },
   "node_modules/slick-carousel/slick/fonts/slick.svg": {
     "file": "assets/slick-12459f22.svg",
     "src": "node_modules/slick-carousel/slick/fonts/slick.svg"
   },
   "main.css": {
-    "file": "assets/main-79c0cce2.css",
+    "file": "assets/main-0c7a59b8.css",
     "src": "main.css"
   },
   "main.js": {
@@ -52,7 +52,7 @@
     "src": "main.js",
     "isEntry": true,
     "css": [
-      "assets/main-79c0cce2.css"
+      "assets/main-0c7a59b8.css"
     ],
     "assets": [
       "assets/ajax-loader-e7b44c86.gif",

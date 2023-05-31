@@ -28,8 +28,6 @@
 <body <?php body_class( 'no-js flex flex-col h-screen font-lato bg-orange-light text-blue-dark selection:bg-blue selection:text-white' ) ?>>
 <?php wp_body_open(); ?>
 <?php include( get_template_directory() . '/inc/svgs.php' ); ?>
-<div
-	class="fixed z-[130] w-full h-2 bg-red-500 sm:bg-pink-500 md:bg-orange-500 rg:bg-amber-400 rl:bg-green-500 min-[1910px]:max-[1921px]:!bg-teal-500 lg:bg-blue-500 xl:bg-violet-500 2xl:bg-fuchsia-500 transition duration-400 opacity-70"></div>
 <header
 	class="flex-0 bg-white text-blue-dark border-b border-blue-dark/40 <?= is_front_page() ? 'absolute w-full z-50' : '' ?>">
 	<input id="toggle" class="absolute opacity-0 toggle" type="checkbox">
