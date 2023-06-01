@@ -13,13 +13,13 @@ $clients   = tspo_get_clients();
                 class="col-start-2 col-span-10 xl:col-start-3 xl:col-span-9 flex flex-col max-rg:items-center gap-8 rl:gap-12">
             <h1 class="text-blue-dark w-fit font-black text-4xl rl:tracking-wider rl:text-5xl"><?= the_title(); ?></h1>
             <div class="flex flex-col gap-8 rl:gap-12">
-                <ul class="uppercase flex gap-6 text-lg rl:text-xl">
-                    <li>
+                <ul class="tabs uppercase flex gap-6 text-lg rl:text-xl">
+                    <li class="tab-item <?= $active_tab === 'clients' ? '' : 'active' ?>">
                         <a href="/references/?tab=chantiers"
-                           class="<?= $active_tab === 'clients' ? '' : 'underline' ?>">Chantiers</a>
+                           class="">Chantiers</a>
                     </li>
-                    <li>
-                        <a href="/references/?tab=clients" class="<?= $active_tab === 'clients' ? 'underline' : '' ?>">Clients</a>
+                    <li class="tab-item <?= $active_tab === 'clients' ? 'active' : '' ?>">
+                        <a href="/references/?tab=clients" class="">Clients</a>
                     </li>
                 </ul>
 				<?php if ( $active_tab === 'clients' ): ?>

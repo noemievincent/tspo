@@ -6,10 +6,14 @@ get_header(); ?>
 			class="col-start-1 col-span-12 rl:col-start-2 rl:col-span-11 flex flex-col max-rg:items-center gap-8 rl:gap-12">
 			<div class="grid grid-cols-12 rl:grid-cols-11 gap-x-5 gap-y-12">
 				<div class="col-start-2 col-span-10 rl:col-span-5 flex flex-col gap-4">
-					<div class="flex gap-5 uppercase text-xl">
-						<a href="/contact" class=" hover:text-orange focus:text-orange transition-colors">Demande</a>
-						<a href="/devis" class="underline hover:text-orange focus:text-orange transition-colors">Devis</a>
-					</div>
+                    <ul class="tabs flex gap-5 uppercase text-xl">
+                        <li class="tab-item">
+                            <a href="/contact" class="">Demande</a>
+                        </li>
+                        <li class="tab-item active">
+                            <a href="/devis" class="">Devis</a>
+                        </li>
+                    </ul>
 					<section class="form quote-form">
 						<h2 id="quote-form" class="sr-only">Demande de devis</h2>
 						<?= do_shortcode( '[contact-form-7 id="291" title="Demande de devis"]' ) ?>

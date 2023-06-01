@@ -161,3 +161,23 @@ footer {
     @apply cursor-default h-7 w-7 flex items-center justify-center rounded-full bg-blue/10 border border-blue/40 hover:text-blue focus:text-blue;
   }
 }
+
+.tabs {
+  .tab-item {
+    @apply hover:text-orange focus:text-orange transition-colors;
+    a {
+      @apply flex flex-col overflow-hidden w-fit;
+      &::after {
+        @apply content-[''] bg-orange w-full h-px -translate-x-full transition-transform;
+      }
+
+      &:hover::after {
+        @apply translate-x-0;
+      }
+    }
+
+    &.active a {
+      @apply text-orange;
+    }
+  }
+}
