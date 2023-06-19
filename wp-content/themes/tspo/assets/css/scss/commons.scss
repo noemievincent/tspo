@@ -163,21 +163,16 @@ footer {
 }
 
 .tabs {
+  @apply w-fit border border-blue-dark/40 flex gap-4 p-2;
   .tab-item {
-    @apply hover:text-orange focus:text-orange transition-colors;
-    a {
-      @apply flex flex-col overflow-hidden w-fit;
-      &::after {
-        @apply content-[''] bg-orange w-full h-px -translate-x-full transition-transform;
-      }
+    @apply bg-transparent px-4 py-1.5 transition-colors;
 
-      &:hover::after {
-        @apply translate-x-0;
-      }
+    &:hover {
+      @apply bg-blue/10;
     }
 
-    &.active a {
-      @apply text-orange;
+    &.active {
+      @apply bg-blue/20;
     }
   }
 }

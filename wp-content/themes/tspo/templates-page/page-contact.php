@@ -7,14 +7,12 @@ get_header(); ?>
                 class="col-start-1 col-span-12 rl:col-start-2 rl:col-span-11 flex flex-col max-rg:items-center gap-8 rl:gap-12">
             <div class="grid grid-cols-12 rl:grid-cols-11 gap-x-5 gap-y-12">
                 <div class="col-start-2 col-span-10 rl:col-span-5 flex flex-col gap-4">
-                    <ul class="tabs flex gap-5 uppercase text-xl">
-                        <li class="tab-item active">
-                            <a href="/contact" class="">Demande</a>
-                        </li>
-                        <li class="tab-item">
-                            <a href="/devis" class="">Devis</a>
-                        </li>
-                    </ul>
+                    <div class="tabs uppercase flex gap-6 text-lg rl:text-xl">
+                        <a class="tab-item active"
+                           href="/contact">Demande</a>
+                        <a class="tab-item"
+                           href="/devis">Devis</a>
+                    </div>
                     <section class="form contact-form">
                         <h2 id="contact-form" class="sr-only">Formulaire de contact</h2>
 						<?= do_shortcode( '[contact-form-7 id="292" title="Formulaire de contact"]' ) ?>
