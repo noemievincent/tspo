@@ -10,7 +10,7 @@
 					</svg>
 				</span>
             </a>
-            <div role="navigation" aria-labelledby="footer-menu" class="">
+            <div role="navigation" class="">
                 <?= wp_nav_menu( [ 'menu'       => 'Navigation de pied de page',
                                    'menu_id'    => 'footer-nav',
                                    'menu_class' => 'footer-nav font-semibold uppercase flex items-center gap-5 max-rg:flex-col rg:gap-8',
@@ -21,7 +21,7 @@
     </div>
     <div class="bg-blue text-white py-8 grid grid-cols-12 gap-4">
     <div class="col-start-2 col-span-10 w-full flex flex-col justify-between items-center gap-8 rg:gap-4 rg:flex-row">
-        <div role="navigation" aria-labelledby="footer-rgpd" class="">
+        <div role="navigation" class="">
             <?= wp_nav_menu( [ 'menu'       => 'RGPD',
                                'menu_id'    => 'footer-rgpd',
                                'menu_class' => 'footer-rgpd flex max-md:flex-col max-md:items-center gap-3 md:gap-6',

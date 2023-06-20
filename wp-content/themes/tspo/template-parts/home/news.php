@@ -7,8 +7,7 @@
 				<?= do_shortcode( '[custom-facebook-feed feed=2]' ) ?>
             </div>
             <a href="<?= get_field( 'facebook', 'option' ) ?>" target="_blank"
-               class="text-lg bg-orange border border-orange text-white text-center inline-block w-full sm:w-max px-10 py-2.5 hover:bg-transparent hover:text-orange focus:bg-transparent focus:text-orange transition-colors">Visiter
-                notre page Facebook</a>
+               class="btn btn-primary text-lg">Visiter notre page Facebook</a>
         </div>
     </div>
 </section>

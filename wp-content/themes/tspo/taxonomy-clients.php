@@ -29,7 +29,7 @@ $worksites = tspo_get_worksites( $client->term_id);
                         </div>
 						<?php if ( get_field( 'link', $client ) ): ?>
                             <a href="<?= get_field( 'link', $client ) ?>" target="_blank"
-                               class="bg-transparent border border-orange text-orange text-center inline-block max-md:w-full px-10 py-2.5 hover:bg-orange hover:text-white focus:bg-orange focus:text-white transition-colors w-fit">Visiter
+                               class="btn btn-primary">Visiter
                                 leur site web</a>
 						<?php endif; ?>
                     </div>

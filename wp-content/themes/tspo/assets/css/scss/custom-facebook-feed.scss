@@ -25,6 +25,10 @@
             @apply !m-0 w-fit;
           }
 
+          .cff-date {
+            @apply text-blue-dark;
+          }
+
           .cff-page-name {
             @apply !text-lg md:!text-xl hover:text-orange transition-colors;
 

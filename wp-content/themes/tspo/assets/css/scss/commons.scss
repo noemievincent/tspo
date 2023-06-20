@@ -176,3 +176,15 @@ footer {
     }
   }
 }
+
+.btn {
+  @apply text-center inline-block px-10 py-2.5 transition-colors max-md:self-center max-sm:w-full w-fit;
+
+  &.btn-primary {
+    @apply bg-orange border border-orange text-white hover:bg-transparent hover:text-orange focus:bg-transparent focus:text-orange;
+  }
+
+  &.btn-secondary {
+    @apply bg-transparent border border-orange text-orange hover:bg-orange hover:text-white focus:bg-orange focus:text-white;
+  }
+}

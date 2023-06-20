@@ -37,7 +37,7 @@
 			<a href="<?= home_url() ?>">
 				<span class="sr-only">Retourner à l'accueil</span>
 				<span>
-					<svg class="logo-simple h-16 w-44">
+					<svg class="logo-simple h-16 w-44 lg:h-20 lg:w-52">
 					  <use xlink:href="#logo-simple"></use>
 					</svg>
 				</span>
@@ -55,7 +55,7 @@
 				<span class="opened-text sr-only">Fermer le menu</span>
 			</label>
 		</div>
-		<div role="navigation" aria-labelledby="main-menu"
+		<div role="navigation"
 		     class="header-menu max-rl:absolute max-rl:top-0 max-rl:z-40 max-rl:h-screen w-full max-rl:bg-white rl:col-end-12 rl:col-span-8 flex justify-center items-center rl:justify-end">
 			<div class="flex max-rl:flex-col items-center gap-14 rl:gap-6 rl:divide-x divide-orange/50">
 				<?= wp_nav_menu( [

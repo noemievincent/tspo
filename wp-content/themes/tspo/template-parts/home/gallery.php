@@ -12,6 +12,7 @@ $images = get_home_gallery();
                     <div class="h-full w-full aspect-[4/3]">
                         <a href="<?= $img['url'] ?>" data-fancybox="gallery"
                            data-caption="<?= $img['caption'] ?? '' ?>">
+                            <span class="sr-only">Affichez l'image en plus grand</span>
                             <img src="<?= $img['url'] ?>" alt="<?= $img['alt'] ?? '' ?>"
                                  class="h-full w-full object-cover">
                         </a>

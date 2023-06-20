@@ -9,7 +9,7 @@ get_header(); ?>
 		            <?= do_shortcode( '[custom-facebook-feed feed=1]' ) ?>
                 </div>
             </div>
-            <a href="<?= get_field('facebook', 'option') ?>" target="_blank" class="bg-orange border border-orange text-white text-center inline-block max-md:w-full text-lg px-10 py-2.5 hover:bg-transparent hover:text-orange focus:bg-transparent focus:text-orange transition-colors">Visitez notre page Facebook</a>
+            <a href="<?= get_field('facebook', 'option') ?>" target="_blank" class="btn btn-primary text-lg">Visitez notre page Facebook</a>
 		</div>
 	</div>
 <?php get_template_part( 'template-parts/contact-section' ) ?>

@@ -18,7 +18,7 @@ $values_items = get_field( 'values_items' );
                 </div>
             </div>
             <a href="<?= $button['url'] ?>"
-               class="max-md:self-center text-lg bg-orange border border-orange text-white text-center inline-block max-sm:w-full w-fit px-10 py-2.5 hover:bg-transparent hover:text-orange focus:bg-transparent focus:text-orange transition-colors"><?= $button['title'] ?></a>
+               class="btn btn-primary text-lg"><?= $button['title'] ?></a>
         </div>
         <div class="max-rl:hidden rl:col-end-13 rl:col-span-6 self-stretch">
             <img src="<?= $img['url'] ?>" alt="<?= $img['alt'] ?>" class="w-full h-full object-cover">
